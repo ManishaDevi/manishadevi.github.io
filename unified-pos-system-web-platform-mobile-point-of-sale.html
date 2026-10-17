@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POS X Reimagining Store POS | Manisha Devi</title>
+  <meta name="description"
+    content="Case study: designing a faster, more flexible point-of-sale for Victoria's Secret stores, on web and mobile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/case-study.css">
+</head>
+
+<body>
+  <div class="page" id="page">
+
+    <nav class="nav">
+      <a class="nav__back" href="index.html#work">
+        <svg class="nav__arrow" width="12" height="9" viewBox="0 0 12 9" overflow="visible">
+          <g>
+            <path d="M 12 3.75 L 6 3.75 L 0 3.75 L 6 0" fill="transparent" stroke="rgb(255, 243, 242)"
+              stroke-linecap="round" />
+            <path d="M 12 4.5 L 0 4.5 L 6 9" fill="transparent" stroke="rgb(255, 243, 242)" stroke-linecap="round" />
+          </g>
+        </svg>
+        <span>Go Back</span>
+      </a>
+    </nav>
+
+    <header class="hero">
+      <img class="hero__hand" src="assets/pos/myviafC309joAyOyUd6RKrBtE.png" alt="Hand holding a phone">
+      <video class="hero__video" src="assets/pos/intro.mp4" poster="assets/pos/intro-poster.png" autoplay muted loop
+        playsinline></video>
+      <span class="hero__island"></span>
+    </header>
+
+    <main class="doc">
+
+      <section id="overview" data-outline="Overview" class="blk"
+        style="height:481px; background:linear-gradient(90deg, #fff 0%, rgb(255,231,236) 87%)">
+        <img class="a" src="assets/pos/vs-logo.svg" alt="Victoria's Secret"
+          style="left:59px; top:94px; width:200px; height:16px">
+        <svg class="a" width="47" height="39" viewBox="-1 -1 18 15" fill="none" style="left:286px; top:126px">
+          <path
+            d="M5.50045 3.37387C5.28795 3.58552 5.06374 3.78802 4.82481 3.9834C3.58879 4.99409 3.92606 7.51158 5.18575 8.49261C6.4109 9.44674 9.21448 9.327 10.5128 8.47518C10.6139 8.4089 10.7184 8.3439 10.8267 8.28007C12.2448 7.44411 12.4376 5.12847 11.0762 4.20307C10.6841 3.93658 10.3431 3.67252 10.0428 3.40587C8.84623 2.34329 6.63431 2.24456 5.50045 3.37387Z"
+            fill="#FFFBFC" />
+        </svg>
+        <img class="a" src="assets/pos/97Ldi0IWgivoWVhv1aqMtqsTAM0.png" alt="Web POS register screen"
+          style="left:402px; top:55px; width:539px; height:302px">
+        <img class="a" src="assets/pos/YeGhJBe877yBcjeyZ7S5DFv8Js.png" alt="Mobile POS app"
+          style="left:684px; top:188px; width:134px; height:255px">
+        <h1 class="a t t-title" style="left:61px; top:151px; width:226px">POS X Reimagining Store POS</h1>
+        <p class="a t t-sub" style="left:64px; top:282px; width:292px">POS for Seamless In-Store Experience, Desiging a
+          faster and more flexible way to shop in store</p>
+      </section>
+
+      <section class="blk blk--flow" style="background:#fff">
+        <div class="f-meta">
+          <div>
+            <p class="f-label">Imapct</p>
+            <p class="f-val">Increase store revenue & reduce task completion time</p>
+          </div>
+          <div>
+            <p class="f-label">My role</p>
+            <p class="f-val">Senior UX Designer, generative & evaluative research</p>
+          </div>
+          <div>
+            <p class="f-label">Team</p>
+            <p class="f-val">1 UX, 1 PM, 6 engineers, legal compliance</p>
+          </div>
+          <div>
+            <p class="f-label">Platform</p>
+            <p class="f-val">Web & mobile POS</p>
+          </div>
+          <div>
+            <p class="f-label">Timeline</p>
+            <p class="f-val">6 months</p>
+          </div>
+        </div>
+        <h2 class="t t-h27 f-h2">Project overview</h2>
+        <p class="f-lead">The legacy POS put sales at risk across more than 1000 stores. Slow checkout and fixed counters limited how many customers a store could serve at peak times. Hard-to-learn workflows made every new hire costly to train.</p>
+        <p class="f-lead">The business needed one modern POS, on web and mobile, that raises store revenue and cuts the time to complete a sale, without disrupting trading.</p>
+        <p class="f-lead">The problem started with how the system was built, one module per task:</p>
+        <ol class="ov-chain">
+          <li class="ov-step"><span class="ov-n">1</span><b>Module-driven silos</b><span>Eight modules, each its own screen, named by a number code.</span></li>
+          <li class="ov-step"><span class="ov-n">2</span><b>Data and workflow friction</b><span>Associates retyped the transaction ID, SKUs and totals between modules.</span></li>
+          <li class="ov-step"><span class="ov-n">3</span><b>Decision-making breakdown</b><span>No stock in search and no price preview, so associates decided without the facts and fixed errors afterwards.</span></li>
+          <li class="ov-step"><span class="ov-n">4</span><b>Business and revenue impact</b><span>Slow checkout, fewer customers served at peak, and costly training for every new hire.</span></li>
+        </ol>
+        </section>
+
+      <section id="tldr" data-outline="TL;DR" class="blk blk--flow tl-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2">TL;DR</h2>
+        <p class="f-lead">for the curious minds who are interested in conclusion</p>
+        <div class="tl-ba">
+          <div class="tl-col">
+            <div class="tl-card tl-card--b">
+              <p class="tl-tag">Add to cart</p><button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-before-screen.png" aria-label="Enlarge: Add to cart screen, before redesign"><img src="assets/pos/concepts/cart-before-screen.png" alt="Add to cart screen, before redesign" loading="lazy"></button><p class="tl-tag">Pricing</p><button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-before-screen.png" aria-label="Enlarge: Pricing screen, before redesign"><img src="assets/pos/concepts/pricing-before-screen.png" alt="Pricing screen, before redesign" loading="lazy"></button>
+            </div>
+            <p class="tl-cap">Before redesign</p>
+          </div>
+          <div class="tl-col">
+            <div class="tl-card tl-card--a">
+              <p class="tl-tag">Add to cart</p><button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-3-screen.png" aria-label="Enlarge: Add to cart screen, after redesign"><img src="assets/pos/concepts/cart-3-screen.png" alt="Add to cart screen, after redesign" loading="lazy"></button><p class="tl-tag">Pricing</p><button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-1-screen.png" aria-label="Enlarge: Pricing screen, after redesign"><img src="assets/pos/concepts/pricing-1-screen.png" alt="Pricing screen, after redesign" loading="lazy"></button>
+            </div>
+            <p class="tl-cap">After redesign</p>
+          </div>
+        </div>
+        <div class="tl-imps">
+          <div class="tl-imp">
+            <p class="tl-imp-t"><span aria-hidden="true">🏬</span> Built to scale</p>
+            <p class="tl-imp-x">One POS for checkout counters and mobile device</p>
+            <p class="tl-imp-n">1000+</p>
+            <p class="tl-imp-s">Rolled out across 1,000+ stores worldwide</p>
+          </div>
+          <div class="tl-imp">
+            <p class="tl-imp-t"><span aria-hidden="true">💰</span> Sales without a queue</p>
+            <p class="tl-imp-x">Associates order online for out-of-stock items</p>
+            <p class="tl-imp-n">$3M+</p>
+            <p class="tl-imp-s">from assisted online orders in store</p>
+          </div>
+          <div class="tl-imp">
+            <p class="tl-imp-t"><span aria-hidden="true">📈</span> Associates chose it</p>
+            <p class="tl-imp-x">Seen as highly valuable for serving customers</p>
+            <p class="tl-imp-n">85%</p>
+            <p class="tl-imp-s">adoption across stores</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="goal" data-outline="Goal" class="blk" style="height:632px; background:rgb(246,246,246)">
+        <h2 class="a t t-h27" style="left:63px; top:73px; width:59px">Goal</h2>
+        <p class="a t t-b17" style="left:63px; top:115px; width:915px">Design a flexible POS that runs on handheld
+          mobile device and across platforms (mobile &amp; web).</p>
+
+        <div class="a tile" style="left:114px; top:197px">
+          <p class="a t t-tile" style="left:24px; top:50px; width:210px; line-height:24px">Cut <b>task completion time</b> by 30%</p>
+        </div>
+        <div class="a tile" style="left:393px; top:197px">
+          <p class="a t t-tile" style="left:24px; top:50px; width:210px; line-height:24px">Cut <b>average checkout wait</b> at peak sales by 50-65%</p>
+        </div>
+        <div class="a tile" style="left:672px; top:197px">
+          <p class="a t t-tile" style="left:24px; top:50px; width:210px; line-height:24px">Able to <b>assist</b> customer <b>anywhere</b> in the store via mPOS</p>
+        </div>
+        <div class="a tile" style="left:253px; top:392px">
+          <p class="a t t-tile" style="left:24px; top:50px; width:210px; line-height:24px">Reduce <b>training time</b> by 25%</p>
+        </div>
+        <div class="a tile" style="left:532px; top:392px">
+          <p class="a t t-tile" style="left:24px; top:50px; width:210px; line-height:24px">Increase <b>revenue</b> by 10%</p>
+        </div>
+      </section>
+
+      <section id="scope" data-outline="Scope" class="blk blk--flow" style="background:rgb(246,246,246)">
+        <h2 class="t t-h27 f-h2">Scope</h2>
+        <div class="f-scope">
+          <div class="f-scope__col">
+            <p class="f-label">In scope</p>
+            <ul class="f-list">
+              <li>Sale flow: product lookup, bag, discounts, tax and payment</li>
+              <li>Mobile POS for assisted selling anywhere in the store</li>
+              <li>A shared component library for web and mobile</li>
+            </ul>
+          </div>
+          <div class="f-scope__col f-scope__col--out">
+            <p class="f-label">Out of scope</p>
+            <ul class="f-list">
+              <li>Customer lookup: loyalty, email capture and credit card lookup</li>
+              <li>Loyalty programme strategy</li>
+              <li>Rarely used manager workflows (moved to a later release)</li>
+            </ul>
+          </div>
+        </div>
+        <h3 class="f-h f-h--spaced">Known constraints</h3>
+        <table class="f-table ">
+          <thead>
+            <tr>
+              <th>Constraint</th>
+              <th>What it meant for the design</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Existing business rules</td>
+              <td>Finance and operations had to approve any change to pricing, discount or tax rules.</td>
+            </tr>
+            <tr>
+              <td>Scale and training budget</td>
+              <td>More than 1000 stores worldwide would use the system, but time and budget to retrain staff were limited.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="research" data-outline="Research" class="blk blk--flow" style="background:rgb(246,246,246)">
+        <p class="t t-eyebrow f-eyebrow">RESEARCH</p>
+        <h3 class="f-h">Discovery workshop with store associates &amp; project managers</h3>
+        <h4 class="f-h4">Understanding the broader product ecosystem</h4>
+        <p class="f-lead">Before looking at individual screens, it was important to understand how the POS fitted into the broader retail ecosystem.</p>
+        <p class="f-lead">A store associate does not think in terms of isolated system modules. They think about helping a customer find a product, checking its availability, completing a transaction, taking payment, or resolving a problem with an existing purchase.</p>
+        <p class="f-lead">These activities connect multiple capabilities:</p>
+        <ul class="f-defs">
+          <li><b>Product discovery</b> Search for products and identify the right size, colour, and availability.</li>
+          <li><b>Transaction management</b> Add items, change quantities, and review the basket.</li>
+          <li><b>Pricing and promotions</b> Understand discounts, taxes, and the final amount.</li>
+          <li><b>Payment</b> Select the appropriate payment method and move through the payment workflow.</li>
+          <li><b>Post-purchase service</b> Locate transactions and support relevant returns or exchanges.</li>
+          <li><b>Assisted online ordering</b> Help customers purchase products that are unavailable in-store.</li>
+        </ul>
+        <p class="f-lead">This ecosystem view shifted the focus from individual interface elements to the relationships between tasks, transaction states, and supporting business capabilities.</p>
+        <h4 class="f-h4">User groups that we identified</h4>
+        <div class="f-personas">
+          <div class="f-persona">
+            <img class="f-persona__av" src="assets/pos/persona-checkout.svg" alt="">
+            <h5 class="f-persona__n">Checkout Specialists</h5>
+            <ol class="f-persona__l">
+              <li>Primarily at cash wrap/checkout counters</li>
+              <li>Billing, applying offers, rewards signup, handling returns and exchanges</li>
+              <li>Long queues, slow systems, confusing offer application</li>
+            </ol>
+          </div>
+          <div class="f-persona">
+            <img class="f-persona__av" src="assets/pos/6UtgmeYKBIOfxy7ngPVwVygU.png" alt="">
+            <h5 class="f-persona__n">Floor Advisor</h5>
+            <ol class="f-persona__l">
+              <li>On the sales floor assisting customers</li>
+              <li>Product lookup, size &amp; availability check, fitting room support, upselling</li>
+              <li>Guide customers quickly, improve conversion</li>
+            </ol>
+          </div>
+          <div class="f-persona">
+            <img class="f-persona__av" src="assets/pos/IqdZj4HPoFXfmFuLBtswoRTVSEk.png" alt="">
+            <h5 class="f-persona__n">Hybrid Associates</h5>
+            <ol class="f-persona__l">
+              <li>Switch between floor &amp; counter depending on rush hours</li>
+              <li>Support checkout during peak, assist on floor during off-peak</li>
+              <li>Balance both customer support &amp; checkout</li>
+            </ol>
+          </div>
+          <div class="f-persona">
+            <img class="f-persona__av" src="assets/pos/QgPLPcC8wHxkeAuV6icyXZQWNg.png" alt="">
+            <h5 class="f-persona__n">New &amp; Part-Time Associate</h5>
+            <p class="f-persona__s">Require Training</p>
+            <ol class="f-persona__l">
+              <li>Work seasonal or part-time shifts, often at the counter during peak hours</li>
+              <li>Learning to scan items, apply discounts, take payment and process returns</li>
+              <li>Too many steps to remember, so they lean on the manual and ask colleagues for help</li>
+            </ol>
+          </div>
+        </div>
+        <h4 class="f-h4">Research - User Interviews / Field Study</h4>
+        <div class="f-stats f-stats--2">
+          <div class="f-stat">
+            <p class="f-stat__v">20</p>
+            <p class="f-stat__l">stores visited in North America</p>
+          </div>
+          <div class="f-stat">
+            <p class="f-stat__v">50+</p>
+            <p class="f-stat__l">associates took part, North America</p>
+          </div>
+        </div>
+        <table class="f-table f-table--plan">
+          <thead>
+            <tr>
+              <th>Participant group</th>
+              <th>What to investigate</th>
+              <th>Why</th>
+              <th>How</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Experienced cashiers</td>
+              <td>Shortcuts, established mental models, frequent tasks</td>
+              <td>They set the speed benchmark, so the new design must not slow down what they already do fast.</td>
+              <td>Scan items, apply a discount, complete payment</td>
+            </tr>
+            <tr>
+              <td>Newer associates</td>
+              <td>Learnability and discoverability</td>
+              <td>Training took longer because of the system&#x27;s complexity, so they show where new users get lost.</td>
+              <td>Find a product, correct an incorrect quantity</td>
+            </tr>
+            <tr>
+              <td>Store managers</td>
+              <td>Permissions, overrides, reconciliation</td>
+              <td>Approvals and exceptions interrupt a sale, so we need to know how much they slow the queue.</td>
+              <td>Approve a discount, resolve an exception</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="f-note">Limitation: associates could be interviewed only outside peak trading hours, but we observed them at work during both peak and non-peak hours.</p>
+        <h4 class="f-h4">Understanding associates behaviour and pain-points at each step</h4>
+        <div class="mm">
+          <div class="mm-box">
+            <svg class="mm-svg" viewBox="0 0 820 520" aria-hidden="true"><path class="mm-p mm-p--high" d="M 480 260 C 540 260, 540 64, 590 64"/><path class="mm-p mm-p--medium" d="M 480 260 C 540 260, 540 260, 590 260"/><path class="mm-p mm-p--low" d="M 480 260 C 540 260, 540 456, 590 456"/><path class="mm-p mm-p--high" d="M 340 260 C 280 260, 280 456, 230 456"/><path class="mm-p mm-p--medium" d="M 340 260 C 280 260, 280 260, 230 260"/><path class="mm-p mm-p--high" d="M 340 260 C 280 260, 280 64, 230 64"/></svg>
+            <div class="mm-c">
+              <p>Assisted online order</p>
+            </div>
+            <div class="mm-n mm-n--high" style="left:71.95%; top:3.85%">
+              <span class="mm-i">1</span>
+              <p class="mm-t">Find the product</p>
+              <p class="mm-d">Two routes, and six screens deep by category</p>
+              <span class="mm-dots" title="high friction">
+                ●●●
+                <i></i>
+              </span>
+            </div>
+            <div class="mm-n mm-n--medium" style="left:71.95%; top:41.54%">
+              <span class="mm-i">2</span>
+              <p class="mm-t">Choose size and colour</p>
+              <p class="mm-d">Two dropdown lists, with price in small text</p>
+              <span class="mm-dots" title="medium friction">
+                ●●
+                <i>●</i>
+              </span>
+            </div>
+            <div class="mm-n mm-n--low" style="left:71.95%; top:79.23%">
+              <span class="mm-i">3</span>
+              <p class="mm-t">Review the basket</p>
+              <p class="mm-d">Dense lines, but the screen is simple</p>
+              <span class="mm-dots" title="low friction">
+                ●
+                <i>●●</i>
+              </span>
+            </div>
+            <div class="mm-n mm-n--high" style="left:0.00%; top:79.23%">
+              <span class="mm-i">4</span>
+              <p class="mm-t">Fix the price</p>
+              <p class="mm-d">Jargon reason codes, and errors take over the screen</p>
+              <span class="mm-dots" title="high friction">
+                ●●●
+                <i></i>
+              </span>
+            </div>
+            <div class="mm-n mm-n--medium" style="left:0.00%; top:41.54%">
+              <span class="mm-i">5</span>
+              <p class="mm-t">Customer and payment</p>
+              <p class="mm-d">Nine screens, confirmed on two devices</p>
+              <span class="mm-dots" title="medium friction">
+                ●●
+                <i>●</i>
+              </span>
+            </div>
+            <div class="mm-n mm-n--high" style="left:0.00%; top:3.85%">
+              <span class="mm-i">6</span>
+              <p class="mm-t">Returns and adjustments</p>
+              <p class="mm-d">Dead-end errors when the sale is not found</p>
+              <span class="mm-dots" title="high friction">
+                ●●●
+                <i></i>
+              </span>
+            </div>
+          </div>
+          <div class="mm-key"><span class="mm-k mm-k--low">Low friction</span><span class="mm-k mm-k--medium">Medium</span><span class="mm-k mm-k--high">High</span></div>
+          <p class="f-note mm-cap">The journey at a glance. Colour shows how much friction we saw at each stage. It is our reading of the screens and associate feedback, not a measured score.</p>
+        </div>
+        <img class="f-img" src="assets/pos/YytiFJi5dh6OLrPkiF5zXsikZIY.png" alt="Current user flow diagram">
+        <a class="cta f-cta" href="https://www.figma.com/board/oK2U4UYdOzoXHE4EDLdNOV/POS-Workflow?node-id=1-367&amp;t=NfE1mWyhPa8qLFMh-1" target="_blank" rel="noopener"><span class="a t t-cta" style="left:20px; top:10px; width:118px">View User flow</span><svg class="a" width="32" height="32" viewBox="0 0 12 12" fill="none" style="left:143px; top:8px"><path d="M3.78391 8.03116L7.90911 3.66543M5.55572 3.70095L7.90911 3.66543L7.98746 5.99531" stroke="#221D1D" stroke-width="0.45048" stroke-linecap="round"/></svg></a>
+        <h4 class="f-h4">Affinity mapping</h4>
+        <img class="f-img" src="assets/pos/cdwbqI7JbtPEG0J2Sa29oPbt3M.png" alt="Affinity mapping board">
+        <a class="cta f-cta" href="https://miro.com/app/board/uXjVHhGksXw=/?share_link_id=394724328454" target="_blank" rel="noopener"><span class="a t t-cta" style="left:15px; top:10px; width:129px">View Miro board</span><svg class="a" width="32" height="32" viewBox="0 0 12 12" fill="none" style="left:143px; top:8px"><path d="M3.78391 8.03116L7.90911 3.66543M5.55572 3.70095L7.90911 3.66543L7.98746 5.99531" stroke="#221D1D" stroke-width="0.45048" stroke-linecap="round"/></svg></a>
+      </section>
+      <section id="key-challenges" data-outline="Key challenges" class="blk blk--flow" style="background:rgb(255,251,251); padding-left:80px; padding-right:80px">
+        <h2 class="t t-h27 f-h2">Research Findings</h2>
+        <ol class="t-li f-ol">
+          <li><b>Fragmented UX:</b> Legacy system&#x27;s module-driven navigation, unclear information hierarchy, and inconsistent action placement made product discovery and checkout workflows slow to complete. <span class="f-ev">70-80% found navigation unclear.</span></li>
+          <li><b>Complex checkout workflows:</b> Discounts, employee discounts, price adjustments, payments, and return-related refunds involved difficult-to-follow workflows, adding friction to checkout. <span class="f-ev">80% said simple tasks feel complicated.</span></li>
+          <li><b>Operational constraints affecting sales:</b> Fixed checkout counters limited flexibility to serve customers during peak periods, potentially affecting sales. <span class="f-ev">70% reported delays helping customers.</span></li>
+          <li><b>Slow onboarding:</b> Difficult workflows increased the learning curve for new hires, adding training overhead and reducing floor efficiency. <span class="f-ev">65% said training takes longer.</span></li>
+        </ol>
+      </section>
+      <section id="problem" data-outline="Defining the problem" class="blk"
+        style="height:1472px; background:url(assets/pos/PwGUddx1uErzi2SwHWoqKCkXue8.png) center/cover no-repeat">
+        <p class="a t t-eyebrow t-eyebrow--lg" style="left:62px; top:71px; width:227px">DEFINING THE PROBLEM</p>
+
+        <div class="a pcard" style="left:62px; top:115px; width:895px; height:420px; background:rgb(237,237,182)">
+          <h3 class="a t t-h23" style="left:41px; top:35px; width:433px; line-height:39px">Slow &amp; Complicated
+            Navigation</h3>
+          <p class="a t t-card" style="left:41px; top:86px; width:783px">Takes multiple clicks/steps even for simple
+            tasks like finding a product by keyword or filters, slowing down associates</p>
+          <img class="a" src="assets/pos/ou8L22Qg7Z7clvTUQR6HLfA3EI.png" alt=""
+            style="left:41px; top:168px; width:381px; height:197px">
+          <img class="a" src="assets/pos/S29ef08KJExavJwcrW7TZWJjUY.png" alt=""
+            style="left:435px; top:168px; width:398px; height:196px">
+        </div>
+
+        <div class="a pcard" style="left:62px; top:555px; width:895px; height:420px; background:rgb(178,218,252)">
+          <h3 class="a t t-h23" style="left:41px; top:36px; width:351px; line-height:39px">Payments</h3>
+          <p class="a t t-card t-card--sm" style="left:41px; top:92px; width:340px">Processes like loyalty lookup, email
+            capture and credit card lookup take too long</p>
+          <img class="a" src="assets/pos/HPdZ3FY1SY9Oj1zxofuWZRfv0.png" alt=""
+            style="left:455px; top:80px; width:378px; height:251px">
+        </div>
+
+        <div class="a pcard" style="left:62px; top:995px; width:895px; height:420px; background:rgb(255,223,200)">
+          <h3 class="a t t-h23" style="left:41px; top:36px; width:600px; line-height:39px">Workflows were system oriented not task</h3>
+          <ul class="a t t-card t-card--sm t-plain" style="left:41px; top:92px; width:390px">
+            <li>Information and actions were difficult to scan</li>
+            <li>Making transaction information easier to understand</li>
+            <li>Helping associates serve customers more flexibly</li>
+          </ul>
+          <div class="a shot-ph" style="left:455px; top:80px; width:378px; height:251px">Screenshot placeholder</div>
+        </div>
+      </section>
+
+      <section class="blk" style="height:346px; background:rgb(37,37,37)">
+        <p class="a t t-hmw" style="left:168px; top:120px; width:709px">"How might we help every associate, new or experienced, complete a sale quickly from the register or the shop floor, so queues shrink and sales grow?"</p>
+      </section>
+
+      <section id="ideation" data-outline="Ideation" class="blk blk--flow j-sec j-sec--wide" style="background:#fff">
+        <p class="t t-eyebrow f-eyebrow">IDEATION</p>
+        <h3 class="f-h">Customer journey map</h3>
+        <p class="f-lead">The journey follows the associate&#x27;s workflow, not just the shopper&#x27;s movement through the store.</p>
+        <div class="j-m">
+          <div class="j-m__lab">Stages</div>
+          <div class="j-m__c j-m__c--stage">
+            <b>1</b>
+            <p class="j-m__name">Discover a product</p>
+          </div>
+          <div class="j-m__c j-m__c--stage">
+            <b>2</b>
+            <p class="j-m__name">Select a product</p>
+          </div>
+          <div class="j-m__c j-m__c--stage">
+            <b>3</b>
+            <p class="j-m__name">Build the basket</p>
+          </div>
+          <div class="j-m__c j-m__c--stage">
+            <b>4</b>
+            <p class="j-m__name">Review the transaction</p>
+          </div>
+          <div class="j-m__c j-m__c--stage">
+            <b>5</b>
+            <p class="j-m__name">Take payment</p>
+          </div>
+          <div class="j-m__c j-m__c--stage">
+            <b>6</b>
+            <p class="j-m__name">Handle returns or exchanges</p>
+          </div>
+          <div class="j-m__lab">Steps</div>
+          <div class="j-m__c j-m__c--steps">
+            <p>Taps Item on the Sell Item screen, then scans the tag or browses by category</p>
+          </div>
+          <div class="j-m__c j-m__c--steps">
+            <p>Chooses size and colour on the product page</p>
+          </div>
+          <div class="j-m__c j-m__c--steps">
+            <p>Adds the item and checks the line on the Sell Item screen</p>
+          </div>
+          <div class="j-m__c j-m__c--steps">
+            <p>Fixes prices and applies discounts by hand when the system misses a promotion</p>
+          </div>
+          <div class="j-m__c j-m__c--steps">
+            <p>Confirms the customer and the amount, then takes tender and sends the receipt</p>
+          </div>
+          <div class="j-m__c j-m__c--steps">
+            <p>Looks up the original sale to adjust a price or return an item</p>
+          </div>
+          <div class="j-m__lab">Screens</div>
+          <div class="j-m__c j-m__c--screens">
+            <a class="j-shot" href="assets/pos/journey/j-scan.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-scan.png" alt="Scan or enter item number" loading="lazy">
+              <small>Scan or enter item number</small>
+            </a>
+            <a class="j-shot" href="assets/pos/journey/j-category.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-category.png" alt="Select a category" loading="lazy">
+              <small>Select a category</small>
+            </a>
+            <a class="j-shot" href="assets/pos/journey/j-filters.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-filters.png" alt="Refine search filters" loading="lazy">
+              <small>Refine search filters</small>
+            </a>
+          </div>
+          <div class="j-m__c j-m__c--screens">
+            <a class="j-shot" href="assets/pos/journey/j-pdp-size.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-pdp-size.png" alt="Select size" loading="lazy">
+              <small>Select size</small>
+            </a>
+            <a class="j-shot" href="assets/pos/journey/j-pdp-color.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-pdp-color.png" alt="Select colour" loading="lazy">
+              <small>Select colour</small>
+            </a>
+          </div>
+          <div class="j-m__c j-m__c--screens">
+            <a class="j-shot" href="assets/pos/journey/j-cart.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-cart.png" alt="Shopping cart" loading="lazy">
+              <small>Shopping cart</small>
+            </a>
+          </div>
+          <div class="j-m__c j-m__c--screens">
+            <a class="j-shot" href="assets/pos/journey/j-discount.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-discount.png" alt="Discount percent and type" loading="lazy">
+              <small>Discount percent and type</small>
+            </a>
+            <a class="j-shot" href="assets/pos/journey/j-employee-error.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-employee-error.png" alt="Invalid employee ID" loading="lazy">
+              <small>Invalid employee ID</small>
+            </a>
+          </div>
+          <div class="j-m__c j-m__c--screens">
+            <a class="j-shot" href="assets/pos/journey/j-purchase-info.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-purchase-info.png" alt="Purchase information" loading="lazy">
+              <small>Purchase information</small>
+            </a>
+            <a class="j-shot" href="assets/pos/journey/j-tender.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-tender.png" alt="Tender" loading="lazy">
+              <small>Tender</small>
+            </a>
+          </div>
+          <div class="j-m__c j-m__c--screens">
+            <a class="j-shot" href="assets/pos/journey/j-price-adjust.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-price-adjust.png" alt="Price adjustment" loading="lazy">
+              <small>Price adjustment</small>
+            </a>
+            <a class="j-shot" href="assets/pos/journey/j-price-adjust-errors.png" target="_blank" rel="noopener">
+              <img src="assets/pos/journey/j-price-adjust-errors.png" alt="Price adjustment errors" loading="lazy">
+              <small>Price adjustment errors</small>
+            </a>
+          </div>
+          <div class="j-m__lab">Thinking</div>
+          <div class="j-m__c j-m__c--thinking">
+            <ul>
+              <li>Is it out of stock here, and can I find it online?</li>
+              <li>Do I have a barcode, or do I have to browse?</li>
+              <li>Which category and filters will narrow it?</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--thinking">
+            <ul>
+              <li>Which size is available?</li>
+              <li>Which colour does the customer want?</li>
+              <li>Are the price and availability right?</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--thinking">
+            <ul>
+              <li>Did the right size and colour get added?</li>
+              <li>Is the price what I told the customer?</li>
+              <li>Is this an online or an in-store item?</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--thinking">
+            <ul>
+              <li>Did the system apply the promotion?</li>
+              <li>Which type fits: transaction, item, employee or price override?</li>
+              <li>Which reason code do I pick?</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--thinking">
+            <ul>
+              <li>Do we already have the customer&#x27;s details?</li>
+              <li>Did the customer confirm the amount?</li>
+              <li>Which tender will they use?</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--thinking">
+            <ul>
+              <li>Where is the original sale?</li>
+              <li>Does the item qualify for an adjustment?</li>
+              <li>What do I do if the sale is not found?</li>
+            </ul>
+          </div>
+          <div class="j-m__lab">Doing</div>
+          <div class="j-m__c j-m__c--doing">
+            <ul>
+              <li>Scans the tag or types the item number</li>
+              <li>Or opens Category Search and picks Victoria&#x27;s Secret, PINK, Sport or Beauty</li>
+              <li>Sets sub-category, size, brand, style, lining and colour</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--doing">
+            <ul>
+              <li>Opens the size list and picks one</li>
+              <li>Opens the colour list and picks one</li>
+              <li>Reads the online SKU, price and availability</li>
+              <li>Opens Full Description for more detail</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--doing">
+            <ul>
+              <li>Touches Add on the product page</li>
+              <li>Checks the item, quantity, price and total</li>
+              <li>Adds more items, or moves on to the customer&#x27;s details</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--doing">
+            <ul>
+              <li>Opens Price Override, Discount, Free Item or Employee Discount from the side buttons</li>
+              <li>Enters a percent or an amount on the keypad</li>
+              <li>Picks a reason such as Coupon Not Scanning or Semi-Annual Sale</li>
+              <li>Scans an employee number, or retries after an invalid one</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--doing">
+            <ul>
+              <li>Searches by the customer&#x27;s email and confirms or enters the ship-to details</li>
+              <li>Directs the customer to confirm contact details and the total on the pin pad</li>
+              <li>Selects a tender: credit or debit, gift card or cash</li>
+              <li>Prints or emails the receipt</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--doing">
+            <ul>
+              <li>Opens Price Adjustment from the side buttons</li>
+              <li>Scans or enters the receipt information</li>
+              <li>Reads the error and answers Yes or No</li>
+              <li>Otherwise returns the item at the original price and sells it again at the current price</li>
+            </ul>
+          </div>
+          <div class="j-m__lab">Feeling</div>
+          <div class="j-m__c j-m__c--feel">
+            <p class="j-emoji">😐</p>
+            <p class="j-fword">Impatient</p>
+          </div>
+          <div class="j-m__c j-m__c--feel">
+            <p class="j-emoji">🤔</p>
+            <p class="j-fword">Unsure</p>
+          </div>
+          <div class="j-m__c j-m__c--feel">
+            <p class="j-emoji">😕</p>
+            <p class="j-fword">Overloaded</p>
+          </div>
+          <div class="j-m__c j-m__c--feel">
+            <p class="j-emoji">😟</p>
+            <p class="j-fword">Doubtful</p>
+          </div>
+          <div class="j-m__c j-m__c--feel">
+            <p class="j-emoji">😬</p>
+            <p class="j-fword">Pressured</p>
+          </div>
+          <div class="j-m__c j-m__c--feel">
+            <p class="j-emoji">😤</p>
+            <p class="j-fword">Frustrated</p>
+          </div>
+          <div class="j-m__lab">Pain points</div>
+          <div class="j-m__c j-m__c--pain">
+            <ul>
+              <li>Searching and filtering can involve too many interactions</li>
+              <li>Four ways to start a search sit on one screen</li>
+              <li>Five filter dropdowns share one page under long red instructions</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--pain">
+            <ul>
+              <li>Size, colour, name, and price are difficult to scan</li>
+              <li>Size and colour are two separate dropdown lists</li>
+              <li>Price and availability sit in small text under the lists</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--pain">
+            <ul>
+              <li>Repeated text and weak hierarchy make items difficult to distinguish</li>
+              <li>Each line packs item, colour, size and SKU into tiny text</li>
+              <li>Online and in-store items share one list</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--pain">
+            <ul>
+              <li>Discounts and final totals are difficult to distinguish</li>
+              <li>Reason codes use internal terms such as GWP, Redline and Gratis</li>
+              <li>Errors take over the whole screen, and there is no preview of the new price</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--pain">
+            <ul>
+              <li>The next action needs to remain clear in the context of the current transaction</li>
+              <li>Associate and customer screens both ask for confirmation, so it is unclear who acts next</li>
+              <li>A red reminder says mobile payments do not work for online items</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--pain">
+            <ul>
+              <li>Associates need to locate the relevant transaction and understand the available actions</li>
+              <li>Messages such as Price Adjustment Invalid and Transaction Not Found do not say what to do next</li>
+              <li>The fallback is a manual return and a second sale</li>
+            </ul>
+          </div>
+          <div class="j-m__lab">Opportunities</div>
+          <div class="j-m__c j-m__c--opportunity">
+            <ul>
+              <li>One search for SKU, name or barcode</li>
+              <li>Filter chips instead of five dropdowns</li>
+              <li>Recent and frequent items up front</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--opportunity">
+            <ul>
+              <li>Touch-sized size and colour chips</li>
+              <li>Live availability for every size</li>
+              <li>Price and SKU always in the same place</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--opportunity">
+            <ul>
+              <li>Group variants under one item</li>
+              <li>Clear levels for name, variant and price</li>
+              <li>Mark online items clearly, with their ship-to status</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--opportunity">
+            <ul>
+              <li>An always-visible transaction summary</li>
+              <li>Itemised discounts with their source</li>
+              <li>A guided discount picker with plain-language reasons and a price preview</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--opportunity">
+            <ul>
+              <li>One primary next action on every screen</li>
+              <li>Show which payment types work before tender</li>
+              <li>Basket summary and payment status always in view</li>
+            </ul>
+          </div>
+          <div class="j-m__c j-m__c--opportunity">
+            <ul>
+              <li>Find the sale by receipt scan, phone or email</li>
+              <li>Show only the actions allowed for each item</li>
+              <li>Explain the reason and the next step in one line</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="blk" style="height:1040px; background:rgb(246,246,246)">
+        <p class="a t t-eyebrow t-eyebrow--sm" style="left:61px; top:59px; width:58px">IDEATION</p>
+        <h3 class="a t t-h23 t-center" style="left:61px; top:80px; width:113px; line-height:25px">Patterning</h3>
+        <img class="a" src="assets/pos/xgF5cq6BnwhCfd8ulWiHVO9jGY.png" alt=""
+          style="left:58px; top:163px; width:518px; height:236px">
+        <img class="a" src="assets/pos/uZk4tEW52yjEU2E2unnKuQBbryo.png" alt=""
+          style="left:58px; top:399px; width:522px; height:268px">
+        <img class="a" src="assets/pos/d27iGBeNJaWvwzvLh5Bb4FIjxY.png" alt=""
+          style="left:580px; top:163px; width:366px; height:504px">
+        <h4 class="a t t-h23" style="left:61px; top:716px; width:600px; line-height:30px">Learnings from these POS patterns</h4>
+        <ol class="a t t-card t-learn" style="left:61px; top:766px; width:885px">
+          <li><b>Start from the associate's tasks.</b> Home screens open on jobs such as search, checkout and returns, or group tiles by task.</li>
+          <li><b>Make the main targets large and few.</b> Big tiles and list rows are easy to hit with a finger.</li>
+          <li><b>Keep payment as a short guided sequence.</b> One decision per screen, a Checkout button always in view, and a final confirmation with receipt options.</li>
+          <li><b>Hide the occasional actions.</b> Rare actions such as gift cards or custom sales sit under More, and automatic discounts cut manual entry.</li>
+          <li><b>Keep search and navigation always in reach.</b> A search bar and tabs or a side rail stay visible.</li>
+        </ol>
+      </section>
+
+      <section class="blk" style="height:572px; background:rgb(252,250,250)">
+        <p class="a t t-eyebrow t-eyebrow--sm" style="left:61px; top:79px; width:58px">IDEATION</p>
+        <h3 class="a t t-h23 t-center" style="left:61px; top:98px; width:268px; line-height:25px">Information
+          Architecture</h3>
+        <img class="a" src="assets/pos/4Aye60IWgM5PPBOeM1JkbzPgRQ.png" alt="Information architecture diagram"
+          style="left:58px; top:198px; width:916px; height:303px">
+      </section>
+
+      <section id="concepts-cart" data-outline="Concepts: Add to cart" class="blk blk--flow c-sec c-sec--wide c-sec--wide3" style="background:#fff">
+        <p class="t t-eyebrow f-eyebrow">CONCEPTS</p>
+        <h3 class="f-h">Add to cart</h3>
+        <p class="f-lead">Every sale starts by finding a product and adding it to the bag. We explored three ways to make that faster, each with a different starting point for the associate. Click a screen to enlarge it.</p>
+        <div class="c-tabs" role="tablist">
+          <button type="button" class="c-tab is-on" role="tab" aria-selected="true" aria-controls="concepts-cart-p1" id="concepts-cart-t1">Concept 1</button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="concepts-cart-p2" id="concepts-cart-t2">Concept 2</button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="concepts-cart-p3" id="concepts-cart-t3">Concept 3</button>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-cart-p1" aria-labelledby="concepts-cart-t1">
+          <h4 class="c-title">Find any product faster</h4>
+          <p class="c-q">HMW help associates reach the right size and color in the fewest taps?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-before-screen.png" aria-label="Enlarge: Before screen, concept 1">
+                <img src="assets/pos/concepts/cart-before-screen.png" alt="Before screen, concept 1">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Many clicks to search by keyword or filter</p>
+                <p class="c-pt"><span>❌</span> Tiny dropdowns for size and color</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-1-screen.png" aria-label="Enlarge: After screen, concept 1">
+                <img src="assets/pos/concepts/cart-1-screen.png" alt="After screen, concept 1">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> Large, touch-friendly size and color selection</p>
+                <p class="c-pt"><span>✅</span> Clear hierarchy, short instructions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-cart-p2" aria-labelledby="concepts-cart-t2" hidden>
+          <h4 class="c-title">Serve customers anywhere in the store</h4>
+          <p class="c-q">HMW let associates start and finish a sale away from the counter?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-before-screen.png" aria-label="Enlarge: Before screen, concept 2">
+                <img src="assets/pos/concepts/cart-before-screen.png" alt="Before screen, concept 2">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Checkout only at fixed counters</p>
+                <p class="c-pt"><span>❌</span> Queues build at peak hours</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-2-screen.png" aria-label="Enlarge: After screen, concept 2">
+                <img src="assets/pos/concepts/cart-2-screen.png" alt="After screen, concept 2">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> Handheld mPOS for floor advisors</p>
+                <p class="c-pt"><span>✅</span> Same flows on mobile and web</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-cart-p3" aria-labelledby="concepts-cart-t3" hidden>
+          <h4 class="c-title">Order online when stock is out of store</h4>
+          <p class="c-q">HMW let an associate place an online order for the customer in a few steps?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-before-screen.png" aria-label="Enlarge: Before screen, concept 3">
+                <img src="assets/pos/concepts/cart-before-screen.png" alt="Before screen, concept 3">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Too many steps to order on a customer&#x27;s behalf</p>
+                <p class="c-pt"><span>❌</span> Rewards sign-up took over 5 minutes</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-3-screen.png" aria-label="Enlarge: After screen, concept 3">
+                <img src="assets/pos/concepts/cart-3-screen.png" alt="After screen, concept 3">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> Out-of-stock items found and ordered in one flow</p>
+                <p class="c-pt"><span>✅</span> Generated $3M+ in assisted online orders</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="concepts-pricing" data-outline="Concepts: Pricing workflow" class="blk blk--flow c-sec c-sec--wide c-sec--wide3" style="background:#fff">
+        <p class="t t-eyebrow f-eyebrow">CONCEPTS</p>
+        <h3 class="f-h">Pricing workflow</h3>
+        <p class="f-lead">Discounts and price changes needed the most explaining and the most care. We explored three ways to apply a discount, from one modal with tabs to a step-by-step wizard. Click a screen to enlarge it.</p>
+        <div class="c-tabs" role="tablist">
+          <button type="button" class="c-tab is-on" role="tab" aria-selected="true" aria-controls="concepts-pricing-p1" id="concepts-pricing-t1">Concept 1</button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="concepts-pricing-p2" id="concepts-pricing-t2">Concept 2</button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="concepts-pricing-p3" id="concepts-pricing-t3">Concept 3</button>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-pricing-p1" aria-labelledby="concepts-pricing-t1">
+          <h4 class="c-title">One modal, four tabs (chosen)</h4>
+          <p class="c-q">HMW let associates find every discount type from one place?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-before-screen.png" aria-label="Enlarge: Before screen, concept 1">
+                <img src="assets/pos/concepts/pricing-before-screen.png" alt="Before screen, concept 1">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Four discount categories sit in a long form</p>
+                <p class="c-pt"><span>❌</span> Internal codes and no hint about which discounts can combine</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-1-screen.png" aria-label="Enlarge: After screen, concept 1">
+                <img src="assets/pos/concepts/pricing-1-screen.png" alt="After screen, concept 1">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> One Transaction Discounts button opens a modal with four tabs</p>
+                <p class="c-pt"><span>✅</span> The modal shows the reason, the limit and any conflict before the associate applies</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-pricing-p2" aria-labelledby="concepts-pricing-t2" hidden>
+          <h4 class="c-title">Edit discounts inline in the cart</h4>
+          <p class="c-q">HMW let associates change a price on the item line, without leaving the cart?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-before-screen.png" aria-label="Enlarge: Before screen, concept 2">
+                <img src="assets/pos/concepts/pricing-before-screen.png" alt="Before screen, concept 2">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Associates leave the cart to change one price</p>
+                <p class="c-pt"><span>❌</span> Many separate screens for one sale</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-2-screen.png" aria-label="Enlarge: After screen, concept 2">
+                <img src="assets/pos/concepts/pricing-2-screen.png" alt="After screen, concept 2">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> A discount editor opens inside the item row</p>
+                <p class="c-pt"><span>✅</span> The associate sees the new price on the same line</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-pricing-p3" aria-labelledby="concepts-pricing-t3" hidden>
+          <h4 class="c-title">Step-by-step wizard</h4>
+          <p class="c-q">HMW guide a new associate to the right discount, one step at a time?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-before-screen.png" aria-label="Enlarge: Before screen, concept 3">
+                <img src="assets/pos/concepts/pricing-before-screen.png" alt="Before screen, concept 3">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Associates must know which category to pick</p>
+                <p class="c-pt"><span>❌</span> Nothing explains what each option does</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-3-screen.png" aria-label="Enlarge: After screen, concept 3">
+                <img src="assets/pos/concepts/pricing-3-screen.png" alt="After screen, concept 3">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> Step 1 asks what the associate needs to do</p>
+                <p class="c-pt"><span>✅</span> Each choice has a plain-language description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="flow-compare" data-outline="End-to-end flow" class="blk blk--flow fc-sec" style="background:#fff">
+        <p class="t t-eyebrow f-eyebrow">END TO END</p>
+        <h3 class="f-h">One sale, before and after</h3>
+        <p class="f-lead">A customer wants a bra in her size. It is out of stock in store, so the associate orders it online, applies a promotion, takes payment, and later adjusts the price. Select a stage to compare the steps the associate takes in each journey.</p>
+        <div class="fc-ctl">
+          <button type="button" class="fc-btn fc-prev" aria-label="Previous stage">← Previous</button>
+          <button type="button" class="fc-btn fc-play" aria-pressed="false">▶ Play journey</button>
+          <button type="button" class="fc-btn fc-next" aria-label="Next stage">Next →</button>
+        </div>
+        <div class="fc-map">
+          <div class="fc-stages" role="tablist" aria-label="Stages of the sale">
+            <button type="button" class="fc-stage is-on" role="tab" aria-selected="true" aria-controls="flow-compare-p1" id="flow-compare-t1"><span class="fc-num">1</span><span class="fc-name">Discover</span><span class="fc-node fc-node--b">4 steps<b>2 friction points</b></span><span class="fc-node fc-node--a">3 steps<b>No friction</b></span></button>
+            <button type="button" class="fc-stage" role="tab" aria-selected="false" aria-controls="flow-compare-p2" id="flow-compare-t2"><span class="fc-num">2</span><span class="fc-name">Select</span><span class="fc-node fc-node--b">4 steps<b>2 friction points</b></span><span class="fc-node fc-node--a">3 steps<b>No friction</b></span></button>
+            <button type="button" class="fc-stage" role="tab" aria-selected="false" aria-controls="flow-compare-p3" id="flow-compare-t3"><span class="fc-num">3</span><span class="fc-name">Build the basket</span><span class="fc-node fc-node--b">3 steps<b>2 friction points</b></span><span class="fc-node fc-node--a">3 steps<b>No friction</b></span></button>
+            <button type="button" class="fc-stage" role="tab" aria-selected="false" aria-controls="flow-compare-p4" id="flow-compare-t4"><span class="fc-num">4</span><span class="fc-name">Review the transaction</span><span class="fc-node fc-node--b">5 steps<b>4 friction points</b></span><span class="fc-node fc-node--a">4 steps<b>No friction</b></span></button>
+            <button type="button" class="fc-stage" role="tab" aria-selected="false" aria-controls="flow-compare-p5" id="flow-compare-t5"><span class="fc-num">5</span><span class="fc-name">Take payment</span><span class="fc-node fc-node--b">5 steps<b>2 friction points</b></span><span class="fc-node fc-node--a">4 steps<b>No friction</b></span></button>
+            <button type="button" class="fc-stage" role="tab" aria-selected="false" aria-controls="flow-compare-p6" id="flow-compare-t6"><span class="fc-num">6</span><span class="fc-name">Handle a return or exchange</span><span class="fc-node fc-node--b">4 steps<b>2 friction points</b></span><span class="fc-node fc-node--a">3 steps<b>No friction</b></span></button>
+          </div>
+        </div>
+        <div class="fc-panel" role="tabpanel" id="flow-compare-p1" aria-labelledby="flow-compare-t1">
+          <div class="fc-lanes">
+            <div class="fc-lane fc-lane--b">
+              <p class="fc-lab">Before</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">1</span><span class="fc-t">Tap Item on the Sell Item screen</span></li>
+                <li class="fc-step"><span class="fc-n">2</span><span class="fc-t">Scan the tag or open Category Search</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">3</span><span class="fc-t">Pick a brand, then set five filter dropdowns</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">4</span><span class="fc-t">Search again online when the item is not in store</span></li>
+              </ol>
+              <p class="fc-note">❌ Four ways to start a search and five dropdowns share one screen.</p>
+            </div>
+            <div class="fc-lane fc-lane--a">
+              <p class="fc-lab">After</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">1</span><span class="fc-t">Scan the tag or type in one search box</span></li>
+                <li class="fc-step"><span class="fc-n">2</span><span class="fc-t">Narrow the results with filter chips</span></li>
+                <li class="fc-step"><span class="fc-n">3</span><span class="fc-t">See stock in store and online on the result</span></li>
+              </ol>
+              <p class="fc-note">✅ One search box. Stock in store and online shows on the result.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fc-panel" role="tabpanel" id="flow-compare-p2" aria-labelledby="flow-compare-t2" hidden>
+          <div class="fc-lanes">
+            <div class="fc-lane fc-lane--b">
+              <p class="fc-lab">Before</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">5</span><span class="fc-t">Open the size list and pick a size</span></li>
+                <li class="fc-step"><span class="fc-n">6</span><span class="fc-t">Open the colour list and pick a colour</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">7</span><span class="fc-t">Find price and availability in small text under the lists</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">8</span><span class="fc-t">Open Full Description to confirm the item</span></li>
+              </ol>
+              <p class="fc-note">❌ Size, colour, name and price are hard to scan.</p>
+            </div>
+            <div class="fc-lane fc-lane--a">
+              <p class="fc-lab">After</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">4</span><span class="fc-t">Tap a size chip</span></li>
+                <li class="fc-step"><span class="fc-n">5</span><span class="fc-t">Tap a colour chip</span></li>
+                <li class="fc-step"><span class="fc-n">6</span><span class="fc-t">Read price and live availability in the same place</span></li>
+              </ol>
+              <p class="fc-note">✅ Touch-sized chips and live availability for every size.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fc-panel" role="tabpanel" id="flow-compare-p3" aria-labelledby="flow-compare-t3" hidden>
+          <div class="fc-lanes">
+            <div class="fc-lane fc-lane--b">
+              <p class="fc-lab">Before</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">9</span><span class="fc-t">Tap Add on the product page</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">10</span><span class="fc-t">Read item, colour, size and SKU packed in small text</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">11</span><span class="fc-t">Tell online items from in-store items in one list</span></li>
+              </ol>
+              <p class="fc-note">❌ Repeated text and weak hierarchy make lines hard to tell apart.</p>
+            </div>
+            <div class="fc-lane fc-lane--a">
+              <p class="fc-lab">After</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">7</span><span class="fc-t">Tap Add once</span></li>
+                <li class="fc-step"><span class="fc-n">8</span><span class="fc-t">Read name, variant and price on clear levels</span></li>
+                <li class="fc-step"><span class="fc-n">9</span><span class="fc-t">See a clear ship-to tag on online items</span></li>
+              </ol>
+              <p class="fc-note">✅ Variants group under one item, with clear levels of text.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fc-panel" role="tabpanel" id="flow-compare-p4" aria-labelledby="flow-compare-t4" hidden>
+          <div class="fc-lanes">
+            <div class="fc-lane fc-lane--b">
+              <p class="fc-lab">Before</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">12</span><span class="fc-t">Open Discount or Price Override from the side buttons</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">13</span><span class="fc-t">Enter a percent or an amount on the keypad</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">14</span><span class="fc-t">Pick a reason that uses internal terms such as GWP or Redline</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">15</span><span class="fc-t">Learn the new price only after it is applied</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">16</span><span class="fc-t">Read an error that fills the screen</span></li>
+              </ol>
+              <p class="fc-note">❌ Discounts and the final total are hard to tell apart, and errors take over the screen.</p>
+            </div>
+            <div class="fc-lane fc-lane--a">
+              <p class="fc-lab">After</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">10</span><span class="fc-t">Tap Transaction Discounts to open one modal</span></li>
+                <li class="fc-step"><span class="fc-n">11</span><span class="fc-t">Pick the Discount tab and enter the amount</span></li>
+                <li class="fc-step"><span class="fc-n">12</span><span class="fc-t">Pick a plain-language reason</span></li>
+                <li class="fc-step"><span class="fc-n">13</span><span class="fc-t">See the limit and any conflict before applying</span></li>
+              </ol>
+              <p class="fc-note">✅ One modal with four tabs. The associate sees the result before applying.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fc-panel" role="tabpanel" id="flow-compare-p5" aria-labelledby="flow-compare-t5" hidden>
+          <div class="fc-lanes">
+            <div class="fc-lane fc-lane--b">
+              <p class="fc-lab">Before</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">17</span><span class="fc-t">Search the customer by email</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">18</span><span class="fc-t">Ask the customer to confirm details on the pin pad, and wait to see who acts next</span></li>
+                <li class="fc-step"><span class="fc-n">19</span><span class="fc-t">Select a tender</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">20</span><span class="fc-t">Read a red reminder that mobile payment does not work for online items</span></li>
+                <li class="fc-step"><span class="fc-n">21</span><span class="fc-t">Print or email the receipt</span></li>
+              </ol>
+              <p class="fc-note">❌ The next action is unclear while both screens ask for confirmation.</p>
+            </div>
+            <div class="fc-lane fc-lane--a">
+              <p class="fc-lab">After</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">14</span><span class="fc-t">Confirm the customer on one screen</span></li>
+                <li class="fc-step"><span class="fc-n">15</span><span class="fc-t">Tap the one primary action, Continue</span></li>
+                <li class="fc-step"><span class="fc-n">16</span><span class="fc-t">Select a tender</span></li>
+                <li class="fc-step"><span class="fc-n">17</span><span class="fc-t">Send the receipt</span></li>
+              </ol>
+              <p class="fc-note">✅ One clear next action for the associate at each step.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fc-panel" role="tabpanel" id="flow-compare-p6" aria-labelledby="flow-compare-t6" hidden>
+          <div class="fc-lanes">
+            <div class="fc-lane fc-lane--b">
+              <p class="fc-lab">Before</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">22</span><span class="fc-t">Open Price Adjustment from the side buttons</span></li>
+                <li class="fc-step"><span class="fc-n">23</span><span class="fc-t">Scan or enter the receipt</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">24</span><span class="fc-t">Read Transaction Not Found with no next step</span></li>
+                <li class="fc-step is-bad"><span class="fc-n">25</span><span class="fc-t">Return the item and sell it again at the current price</span></li>
+              </ol>
+              <p class="fc-note">❌ Messages do not say what to do next, so the fallback is a manual return and a second sale.</p>
+            </div>
+            <div class="fc-lane fc-lane--a">
+              <p class="fc-lab">After</p>
+              <ol class="fc-steps">
+                <li class="fc-step"><span class="fc-n">18</span><span class="fc-t">Find the sale by receipt scan, phone or email</span></li>
+                <li class="fc-step"><span class="fc-n">19</span><span class="fc-t">See the options for that sale</span></li>
+                <li class="fc-step"><span class="fc-n">20</span><span class="fc-t">Apply the price adjustment in one flow</span></li>
+              </ol>
+              <p class="fc-note">✅ The associate finds the sale and sees every available action.</p>
+            </div>
+          </div>
+        </div>
+        <div class="fc-totals">
+          <div class="fc-total fc-total--b"><span class="fc-big">25</span> steps, <span class="fc-big">14</span> friction points</div>
+          <div class="fc-total fc-total--a"><span class="fc-big">20</span> steps, <span class="fc-big">0</span> friction points</div>
+        </div>
+      </section>
+      <section id="final-designs" data-outline="Final designs" class="blk" style="height:1344px; background:#fff">
+        <h2 class="a t t-h28 t-final" style="left:176px; top:118px; width:692px; color:rgb(45,45,45)">Final Designs -
+          Web</h2>
+        <img class="a rd6" src="assets/pos/73joIvdzWb4dRGKX39swlLFRmcQ.png" alt=""
+          style="left:92px; top:196px; width:414px; height:233px">
+        <img class="a rd6" src="assets/pos/ZFL8JJvfbqDR6Px9HLLJZangI.png" alt=""
+          style="left:538px; top:196px; width:414px; height:233px">
+        <img class="a" src="assets/pos/0IfwnXW9ZXXiFSoTjJY16GTCBU.png" alt=""
+          style="left:92px; top:462px; width:414px; height:233px">
+        <img class="a rd6" src="assets/pos/GNJuis3LF9WV6X1csJRyfqmrZcU.png" alt=""
+          style="left:538px; top:462px; width:414px; height:233px">
+        <img class="a rd6" src="assets/pos/t0n1xqT6cMnlW6jGQIZJjKno8.png" alt=""
+          style="left:92px; top:727px; width:414px; height:233px">
+        <img class="a rd6" src="assets/pos/H3gPrnTV4G2tVRKoFestgcwycpI.png" alt=""
+          style="left:538px; top:727px; width:414px; height:233px">
+        <img class="a rd6" src="assets/pos/ASMPejbFn9T9E1piEbN01DuvGn8.png" alt=""
+          style="left:92px; top:992px; width:414px; height:233px">
+        <img class="a rd6" src="assets/pos/ODXJfumtQ6TVGyn5h2gIzAGHJU.png" alt=""
+          style="left:538px; top:992px; width:414px; height:233px">
+      </section>
+
+      <section class="blk" style="height:1297px; background:rgb(238,232,234)">
+        <h2 class="a t t-h28 t-final" style="left:176px; top:71px; width:692px; color:rgb(49,49,49)">Final Design &amp;
+          Solution for Mobile</h2>
+        <img class="a" src="assets/pos/jg8yfKH3vtMBmGdoHNWQ7qpmXtU.png" alt=""
+          style="left:178px; top:202px; width:211px; height:430px">
+        <img class="a" src="assets/pos/badZo8lOeCu8MOfcf89Kzm7eBA.png" alt=""
+          style="left:409px; top:202px; width:221px; height:435px">
+        <img class="a" src="assets/pos/wQtRnVCNVSi1ekmyFgFUEhXE.png" alt=""
+          style="left:650px; top:202px; width:217px; height:434px">
+        <img class="a" src="assets/pos/odrCHxqsBQCqusWn2HhMLQme94.png" alt=""
+          style="left:266px; top:728px; width:219px; height:443px">
+        <img class="a" src="assets/pos/WIXhJhL2F0qoqo2KFVwNrCEPgjw.png" alt=""
+          style="left:518px; top:728px; width:216px; height:442px">
+      </section>
+
+      <section id="impact" data-outline="Business impact" class="blk" style="height:549px; background:rgb(246,246,246)">
+        <p class="a t t-eyebrow t-eyebrow--sm" style="left:490px; top:82px; width:65px">SOLUTION</p>
+        <h2 class="a t t-h28 t-nowrap" style="left:327px; top:105px; width:390px">Business Impact &amp; Outcomes</h2>
+        <p class="a t t-b17 t-center" style="left:132px; top:156px; width:781px">The POS solution scaled quickly,
+          improving both customer experience and store efficiency.</p>
+
+        <h3 class="a t t-h28" style="left:181px; top:258px; width:177px; line-height:31px">1000+ stores worldwide</h3>
+        <p class="a t t-b17 t-center" style="left:178px; top:344px; width:184px">Rolled out in 334 stores</p>
+        <h3 class="a t t-h28" style="left:437px; top:258px; width:166px">$3M+ revenue</h3>
+        <p class="a t t-b17 t-center" style="left:437px; top:332px; width:170px">Generated through in-store assisted
+          online orders</p>
+        <h3 class="a t t-h28" style="left:697px; top:258px; width:155px">85% adoption</h3>
+        <p class="a t t-b17 t-center" style="left:672px; top:332px; width:204px">Associates find the tool highly
+          valuable for serving customers</p>
+      </section>
+    </main>
+  </div>
+  <script src="js/case-study.js"></script>
+  <script src="js/outline.js"></script>
+</body>
+
+</html>

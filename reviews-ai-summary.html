@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Review Summaries | Manisha Devi</title>
+  <meta name="description" content="Case study: designing AI-generated review summaries for the Victoria's Secret product page, from research to final handoff.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@300;400;500&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/case-study-ai.css">
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a class="nav__back" href="index.html#work">
+      <svg class="nav__arrow" width="12" height="9" viewBox="0 0 12 9" overflow="visible"><g><path d="M 12 3.75 L 6 3.75 L 0 3.75 L 6 0" fill="transparent" stroke="rgb(255, 243, 242)" stroke-linecap="round"/><path d="M 12 4.5 L 0 4.5 L 6 9" fill="transparent" stroke="rgb(255, 243, 242)" stroke-linecap="round"/></g></svg>
+      <span>Go Back</span>
+    </a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__stage">
+      <img class="hero__laptop" src="assets/ai/CVPs2hD2wIuaZMI0xgNgeSr50.png" alt="Product page on a laptop">
+      <img class="hero__phone" src="assets/ai/CGgNIjki3Bf8EFCFdRNPsUOIU.png" alt="Product page on a phone">
+    </div>
+  </header>
+
+  <main class="doc">
+    <div class="doc__col">
+
+    <section class="sec" style="padding-top:59px;padding-bottom:73px;gap:54px">
+      <div class="col" style="justify-content:center;align-items:center;gap:20px">
+        <p class="t-g22-400">Problem Statement</p>
+        <p class="t-i16-400">At Victoria's secret confidence is everything, whether it’s in what you wear or how you shop. Around 62% of customers land on the PDP (Product detail)page to evaluate products, and the majority of our PDP traffic flows into the customer review funnel. However, 30% customers drop off due to overwhelming, unstructured, and repetitive customer reviews.</p>
+      </div>
+      <img src="assets/ai/BA8Yku7IoVAqhNba406kCSvwjTw.png" alt="" style="width:575px">
+    </section>
+
+    <section class="sec" style="padding-top:42px;padding-bottom:70px;gap:18px">
+      <p class="t-g22-400">Proposed Solution</p>
+      <p class="t-i16-400">To address this, the goal was to integrate AI-generated review summaries into the Victoria’s Secret shopping experience. This feature delivers a concise, insight-rich paragraph highlighting key product information, helping customers make faster and more confident purchase decisions.</p>
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:50px;padding-bottom:82px;gap:102px;align-items:center">
+      <p class="t-g22-400-b">Our Primary Target Audience is USA-Based Customers  🇺🇸 </p>
+      <div class="row" style="align-items:center;gap:118px">
+        <div class="row" style="justify-content:center;align-items:center;gap:20px;width:381px;max-width:100%">
+          <img src="assets/ai/YdqNBqdPXXcvHP8MBIcylN7ptVM.png" alt="" style="width:142px">
+          <p class="t-i14-400" style="width:max-content;min-width:219px;max-width:100%">New Customer</p>
+        </div>
+        <div class="row" style="justify-content:center;align-items:center;gap:20px;width:381px;max-width:100%">
+          <img src="assets/ai/YdqNBqdPXXcvHP8MBIcylN7ptVM.png" alt="" style="width:142px">
+          <p class="t-i14-400" style="width:max-content;min-width:219px;max-width:100%">Returning Customers <br>Discovering New Categories</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:40px;padding-bottom:100px;gap:40px;align-items:center">
+      <h2 class="t-g22-400-c">Global Collaboration with Cross-Functional Teams</h2>
+      <img src="assets/ai/aGhdgEKlUCFpL5Yyc9HyIwCRuo.png" alt="">
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:65px;padding-bottom:80px;gap:60px">
+      <div class="col" style="align-items:flex-start;gap:8px">
+        <p class="t-g16-400">Our Journey Begins</p>
+        <p class="t-g22-400-b">95% of Customers say that reviews matter to them</p>
+      </div>
+      <div class="col" style="justify-content:center;align-items:flex-start;gap:30.5px">
+        <img src="assets/ai/srVg5UJ4pnBZ5j6OGdm9wGW07lk.png" alt="">
+        <div class="row" style="align-items:flex-start;gap:12.66px">
+          <img src="assets/ai/4DVas6ZcDrguVfGXLL1G1Sb19sU.png" alt="" style="width:284.89px">
+          <img src="assets/ai/JBzFGdc8B0DP9ZfMsc4fvrLQ.png" alt="" style="width:284.91px">
+          <img src="assets/ai/JBzFGdc8B0DP9ZfMsc4fvrLQ.png" alt="" style="width:284.89px">
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:77px;padding-bottom:77px;gap:100px;align-items:center">
+      <div class="col" style="align-items:flex-start;gap:6px">
+        <p class="t-g16-400">Existing Customer Review Funnel Experience on PDP</p>
+        <p class="t-g22-400-b">Customer reviews influence 80% of purchase decisions</p>
+      </div>
+      <img src="assets/ai/MYznPAeaXrpTfwcNJM3uIpy9c.png" alt="">
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:79px;padding-bottom:90px;gap:90px;align-items:center">
+      <div class="col" style="justify-content:center;align-items:center;gap:6px">
+        <p class="t-i16-400-b">Finding Customer Pain Points</p>
+        <p class="t-g22-400-b">Understanding Customer Pain Points through Data and User Research</p>
+      </div>
+      <div class="row" style="justify-content:center;align-items:center;gap:53px">
+        <div class="col" style="justify-content:center;align-items:center;gap:52px;width:413.5px;max-width:100%">
+          <img src="assets/ai/foTOx4x3Zv9zFcPHzFG34NwG2zA.png" alt="">
+          <p class="t-i14-300" style="width:max-content;min-width:165.92px;max-width:100%">High-Demand Categories</p>
+        </div>
+        <div class="col" style="justify-content:center;align-items:center;gap:52px;width:413.5px;max-width:100%">
+          <img src="assets/ai/2RO3nt0yQrhTI0mCYQYJFUDcfMM.png" alt="">
+          <p class="t-i14-300" style="width:max-content;min-width:242.03px;max-width:100%">Products with High Customer Ratings</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:57px;padding-bottom:57px;gap:90px;align-items:center">
+      <p class="t-g22-400-b">Our Findings from Data</p>
+      <div class="col" style="justify-content:center;align-items:center;gap:56px">
+        <img src="assets/ai/ZoSrU7RwttJMobYex2Dyg6juwv4.png" alt="">
+        <img src="assets/ai/UXLZkCu9oJJcUPDSC1whIMmwz6U.png" alt="">
+      </div>
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:75px;padding-bottom:75px;gap:81px;align-items:center">
+      <div class="col" style="align-items:flex-start;gap:6px">
+        <p class="t-g16-400">Why are our customer skipping reviews?</p>
+        <p class="t-g22-400-b">In Our Customers’ Own Words</p>
+      </div>
+      <div class="col" style="justify-content:center;align-items:center;gap:27px">
+        <img src="assets/ai/qzzW4adq1ENZq4JPzlWftwwl4.png" alt="">
+        <p class="t-g18-400">Assigned customers the task of adding a product to cart using reviews to identify challenges in the journey.</p>
+      </div>
+      <img src="assets/ai/0XM6dtWEEqmyH9zaE7Z6pwWO7w.png" alt="">
+    </section>
+
+    <section class="sec" style="padding-top:63px;padding-bottom:63px;gap:63px;align-items:center">
+      <p class="t-g22-400-b">Key Insights from Customer Research</p>
+      <div class="row" style="justify-content:center;align-items:center;gap:53px">
+        <img src="assets/ai/ULWuDXw64M8jJpsapUzZf4Mod0s.png" alt="" style="width:531px">
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:100px;padding-bottom:100px;gap:78px">
+      <div class="col" style="align-items:flex-start;gap:12px">
+        <p class="t-g22-400-b">Re-defined Customer Problems</p>
+        <p class="t-i16-400-c">From our existing customer review experience, data analysis, and research insights, we identified the major pain points</p>
+      </div>
+      <div class="row" style="align-items:center;gap:53px">
+        <img src="assets/ai/j4PqPffYaiEwXDRwI27cvUrcHqE.png" alt="" style="width:548px">
+      </div>
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:70px;padding-bottom:80px;gap:80px;align-items:center">
+      <p class="t-g22-400-b">The benefits of solving this customer problem are:</p>
+      <div class="col" style="justify-content:center;align-items:center;gap:92px">
+        <div class="col" style="align-items:flex-start;gap:32px">
+          <p class="t-g18-300">Customer point of view</p>
+          <img src="assets/ai/0nZk1c5DdAPDUVoT7aFk2dH4k.png" alt="" style="width:644px">
+        </div>
+        <div class="col" style="align-items:flex-start;gap:32px">
+          <p class="t-g18-300">Business point of view</p>
+          <img src="assets/ai/v1AhvVEerNiT1lCRCwSd0U2wItU.png" alt="" style="width:641px">
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:64px;padding-bottom:64px;gap:63px;align-items:center">
+      <div class="col" style="align-items:flex-start;gap:6px">
+        <p class="t-g16-400">Design approaches from others</p>
+        <p class="t-g22-400-d">How are others solving this problem?</p>
+      </div>
+      <div class="row" style="align-items:flex-start;gap:53px">
+        <img src="assets/ai/7GjRnBPMY5aGVc6QpCTW3Fo.png" alt="" style="width:579px">
+      </div>
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:60px;padding-bottom:60px;gap:40px">
+      <div class="col" style="align-items:flex-start;gap:40px">
+        <p class="t-g22-400-b">Highlights of AI Summary Features from Our Competitors</p>
+        <img src="assets/ai/pyuRrSaXPYTuQGUoWnTfjNtE0gQ.png" alt="" style="width:583px">
+      </div>
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:28px;padding-bottom:100px;gap:61px;align-items:center">
+      <p class="t-g22-400-d">Ideating Thoughts &amp; Curiosity</p>
+      <img src="assets/ai/dFMCmbVappK7ey4uUECHkXA5G3Y.png" alt="">
+    </section>
+
+    <section class="sec sec--pink" style="padding-top:55px;padding-bottom:100px;gap:102px;align-items:center">
+      <p class="t-g26-500">3 Shortlisted Design Concepts</p>
+      <div class="col" style="justify-content:center;align-items:center;gap:132px">
+        <div class="col" style="justify-content:center;align-items:center;gap:124px">
+          <div class="col" style="align-items:center;gap:10px">
+            <p class="t-i20-400" style="width:max-content;min-width:94.06px;max-width:100%">Concept 1</p>
+            <p class="t-i16-400-b" style="width:max-content;min-width:324.81px;max-width:100%">AI-Generated Summary with Key Attributes</p>
+          </div>
+          <div class="row" style="justify-content:center;align-items:flex-start;gap:45px">
+            <div class="col" style="align-items:flex-start;gap:15px;width:417.5px;max-width:100%">
+              <p class="t-i16-400-d" style="width:max-content;min-width:169.89px;max-width:100%">Business point of view</p>
+              <img src="assets/ai/6Y5eCvuTVrS5PeiAILJ7UI927j8.png" alt="">
+            </div>
+            <div class="col" style="align-items:center;gap:15px;width:417.5px;max-width:100%">
+              <p class="t-i16-400-b" style="width:max-content;min-width:226px;max-width:100%">Compare with Existing Design</p>
+              <img src="assets/ai/CXKBGYMAOFTF2NfvFdfgbN8Od7w.png" alt="" style="width:216px">
+            </div>
+          </div>
+        </div>
+        <div class="row" style="align-items:flex-start;gap:67px">
+          <div class="col" style="align-items:flex-start;gap:12px;width:248.66px;max-width:100%">
+            <p class="t-i16-500" style="width:max-content;min-width:77.02px;max-width:100%">Highlights</p>
+            <div class="col">
+              <p class="t-i15-400"><br></p>
+              <ul class="t-i15-300">
+                <li>
+                  <p>Key attributes highlight product features<br><br></p>
+                </li>
+              </ul>
+              <ul class="t-i15-300">
+                <li>
+                  <p>Includes both positive and negative feedback</p>
+                </li>
+              </ul>
+              <p class="t-i15-300"><br></p>
+              <ul class="t-i15-300">
+                <li>
+                  <p>Organizes information in a logical flow : title → key attributes → summary paragraph → feedback mechanism, making it easy to consume.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col" style="align-items:flex-start;gap:12px;width:248.67px;max-width:100%">
+            <p class="t-i16-500" style="width:max-content;min-width:74.31px;max-width:100%">Strengths</p>
+            <div class="col">
+              <p class="t-i15-300"><br></p>
+              <ul class="t-i15-300">
+                <li>
+                  <p>Helps users quickly grasp core product insights without scanning countless reviews.<br><br></p>
+                </li>
+              </ul>
+              <ul class="t-i15-300">
+                <li>
+                  <p>Reduces information overload by summarizing repetitive and unstructured reviews..</p>
+                </li>
+              </ul>
+              <p class="t-i15-300"><br></p>
+              <ul class="t-i15-300">
+                <li>
+                  <p>Including both positive and negative points increases credibility and authenticity.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col" style="align-items:flex-start;gap:12px;width:248.67px;max-width:100%">
+            <p class="t-i16-500" style="width:max-content;min-width:106.94px;max-width:100%">Consideration</p>
+            <div class="col">
+              <p class="t-i15-300"><br></p>
+              <ul class="t-i15-300">
+                <li>
+                  <p>If there are no negative reviews, only positive content will be shown in that case.</p>
+                </li>
+              </ul>
+              <p class="t-i15-300"><br></p>
+              <ul class="t-i15-300">
+                <li>
+                  <p>Even if a customer has only left negative comments, we will not display the AI summary features.</p>
+                </li>
+              </ul>
+              <p class="t-i15-300"><br></p>
+              <ul class="t-i15-300">
+                <li>
+                  <p>Ensure the AI correctly captures sentiments and key product aspects to avoid misleading summaries</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:84px;padding-bottom:100px;gap:144px;align-items:center">
+      <div class="col" style="align-items:center;gap:10px">
+        <p class="t-i20-500" style="width:max-content;min-width:98.91px;max-width:100%">Concept 2</p>
+        <p class="t-i16-400-b" style="width:max-content;min-width:210.53px;max-width:100%">AI Summary with paragraph</p>
+      </div>
+      <div class="row" style="justify-content:center;align-items:flex-start;gap:49px">
+        <div class="col" style="align-items:flex-start;gap:20px;width:415.5px;max-width:100%">
+          <p class="t-i16-400-b" style="width:max-content;min-width:134px;max-width:100%"> Proposed Design</p>
+          <img src="assets/ai/3rbSnvPHnR1bRVAlUdNpXs8GQ.png" alt="">
+        </div>
+        <div class="col" style="justify-content:center;align-items:flex-start;gap:20px;width:415.5px;max-width:100%">
+          <p class="t-i16-400-b" style="width:max-content;min-width:226px;max-width:100%">Compare with Existing Design</p>
+          <img src="assets/ai/CXKBGYMAOFTF2NfvFdfgbN8Od7w.png" alt="" style="width:216px">
+        </div>
+      </div>
+      <div class="row" style="justify-content:center;align-items:flex-start;gap:67px">
+        <div class="col" style="align-items:flex-start;gap:12px;width:248.66px;max-width:100%">
+          <p class="t-i16-500" style="width:max-content;min-width:77.02px;max-width:100%">Highlights</p>
+          <div class="col">
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>AI summary title is customer-focused rather than emphasizing AI, keeping it relatable.</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Feedback mechanism allows users to indicate whether the summary was useful.</p>
+                <p><br></p>
+              </li>
+              <li>
+                <p>Includes both positive and negative customer feedback in a single paragraph for a balanced view</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col" style="align-items:flex-start;gap:12px;width:248.67px;max-width:100%">
+          <p class="t-i16-500" style="width:max-content;min-width:74.31px;max-width:100%">Strengths</p>
+          <div class="col">
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Paragraph-style summary makes it easy for users to quickly grasp product sentiment.<br><br></p>
+              </li>
+            </ul>
+            <ul class="t-i15-300">
+              <li>
+                <p>Feedback mechanism guides future improvements and helps users assess content relevance.</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Minimal design constraints can be implemented with low development effort.<br><br></p>
+              </li>
+              <li>
+                <p>Enhances user experience by reducing information overload from multiple reviews.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col" style="align-items:flex-start;gap:12px;width:248.67px;max-width:100%">
+          <p class="t-i16-500" style="width:max-content;min-width:106.94px;max-width:100%">Consideration</p>
+          <div class="col">
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Placement and length may need adjustment for mobile vs web experience to avoid clutter<br><br></p>
+              </li>
+              <li>
+                <p>If no reviews are available for a product, the AI summary feature cannot be applied.</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>If only positive reviews exist, the summary will reflect only positive points.</p>
+                <p><br></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--pink" style="padding-top:60px;padding-bottom:100px;gap:120px;align-items:center">
+      <div class="col" style="align-items:center;gap:10px">
+        <p class="t-i20-500" style="width:max-content;min-width:99.13px;max-width:100%">Concept 3</p>
+        <p class="t-i16-400-b" style="width:max-content;min-width:224.83px;max-width:100%">AI Summary with bullet points</p>
+      </div>
+      <div class="row" style="justify-content:center;align-items:flex-start;gap:49px">
+        <div class="col" style="align-items:flex-start;gap:20px;width:415.5px;max-width:100%">
+          <p class="t-i16-400-b" style="width:max-content;min-width:134px;max-width:100%"> Proposed Design</p>
+          <img src="assets/ai/9skvS4BG86WNwKqCenPMZNcIE.png" alt="" style="width:296px">
+        </div>
+        <div class="col" style="justify-content:center;align-items:flex-start;gap:20px;width:415.5px;max-width:100%">
+          <p class="t-i16-400-b" style="width:max-content;min-width:226px;max-width:100%">Compare with Existing Design</p>
+          <img src="assets/ai/CXKBGYMAOFTF2NfvFdfgbN8Od7w.png" alt="" style="width:216px">
+        </div>
+      </div>
+      <div class="row" style="justify-content:center;align-items:flex-start;gap:68px">
+        <div class="col" style="align-items:flex-start;gap:12px;width:248px;max-width:100%">
+          <p class="t-i16-500" style="width:max-content;min-width:77.02px;max-width:100%">Highlights</p>
+          <div class="col">
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Summaries review in bullet points for quick scanning.<br><br></p>
+              </li>
+            </ul>
+            <ul class="t-i15-300">
+              <li>
+                <p>Shows negative and positive feedback with thumps up and thumps down icons.</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Includes AI disclaimer to inform users it’s genrated from reviews </p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Feedback mechanism allows users to indicate whether the summary was useful.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col" style="align-items:flex-start;gap:12px;width:248px;max-width:100%">
+          <p class="t-i16-500" style="width:max-content;min-width:74.31px;max-width:100%">Strengths</p>
+          <div class="col">
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Visual icons make sentiment immediately recognizable.<br><br></p>
+              </li>
+              <li>
+                <p>Easy to read and scan key points quickly</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Balanced view of product through positive and negative higlights</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Encouges users trust through disclaimer transpancy</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Collect user feedback to improve AI summary relevance.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col" style="align-items:flex-start;gap:12px;width:248px;max-width:100%">
+          <p class="t-i16-500" style="width:max-content;min-width:106.94px;max-width:100%">Consideration</p>
+          <div class="col">
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Avoid too many bullet points to prevent clutter</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Icons should be clear and universally understandable.</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Disclaimer should be concise and readable.</p>
+              </li>
+            </ul>
+            <p class="t-i15-300"><br></p>
+            <ul class="t-i15-300">
+              <li>
+                <p>Placement of feedback mechnasim should be noticeable but not distracting.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:75px;padding-bottom:95px;gap:82px;align-items:center">
+      <p class="t-g22-400-b">Initial Design Review with Cross-Functional Teams (AI, Tech, Product, Design)</p>
+      <div class="col" style="align-items:flex-start;gap:27px">
+        <img src="assets/ai/6Y5eCvuTVrS5PeiAILJ7UI927j8.png" alt="" style="width:490px">
+        <p class="t-i16-400-e">Most of us preferred Design option 1</p>
+      </div>
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:66px;padding-bottom:80px;gap:100px;align-items:center">
+      <div class="col" style="justify-content:center;align-items:center;gap:58px">
+        <div class="col" style="align-items:flex-start;gap:4px">
+          <p class="t-g16-400">Re-iteration approach</p>
+          <p class="t-g22-400-b">Improving Concept 1 : Toward Better Usability</p>
+        </div>
+        <img src="assets/ai/EMzycnyzB8dnxjOzByvDCjJneY.png" alt="">
+      </div>
+      <div class="row" style="justify-content:center;align-items:flex-start;gap:43px">
+        <img src="assets/ai/lpaeQcjBsrukcFWCXC1HiHOv4M.png" alt="" style="width:264.66px">
+        <img src="assets/ai/enaEK9uTahTF3njdZD6djuhLpzk.png" alt="" style="width:264.67px">
+        <img src="assets/ai/cOIhb2U3wyLUvykbXfNJGDQMTF8.png" alt="" style="width:264.67px">
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:69px;padding-bottom:69px;gap:53px">
+      <p class="t-g22-400-b">Design options presented to leadership for alignment</p>
+      <img src="assets/ai/2dwkrlamIGv1hxzGHu5oyw8PHD0.png" alt="" style="width:513px">
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:60px;padding-bottom:60px;gap:65px;align-items:center">
+      <div class="col" style="align-items:flex-start;gap:64px">
+        <p class="t-g22-400-b">UsabilityTesting with New and Returning Customers</p>
+        <div class="col" style="align-items:flex-start;gap:81px">
+          <div class="col" style="justify-content:center;align-items:flex-start;gap:13px">
+            <p class="t-i16-400-b"><strong class="hl">77% Positive Response</strong> to the Design Option with Summary Paragraph</p>
+            <img src="assets/ai/0EpbeneHCPkZ8L1zAwr7O9iaUkY.png" alt="" style="width:579px">
+          </div>
+          <div class="col" style="justify-content:center;align-items:flex-start;gap:20px">
+            <p class="t-i16-400-b"><strong class="hl">33% Positive Response</strong> to the Design Option with featuring a horizontal card scroll and collapsed review summary</p>
+            <img src="assets/ai/4zMtI29PZWtz4sxnZz8Sey0cw.png" alt="" style="width:576px">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--pink" style="padding-top:56px;padding-bottom:56px;gap:80px">
+      <p class="t-g22-400-e">Final Design Hand off “ AI summary with Paragraph” on M-web</p>
+      <div class="row" style="align-items:flex-start;gap:34px">
+        <div class="col" style="align-items:flex-start;gap:12px;width:270.66px;max-width:100%">
+          <p class="t-g12-400">Product has more than<br> 100 reviews</p>
+          <img src="assets/ai/wGUyrqpJIZ2H9Alz8sGu0ZUGk.png" alt="">
+        </div>
+        <div class="col" style="align-items:flex-start;gap:27px;width:270.67px;max-width:100%">
+          <p class="t-g12-400">Product has less than 100 reviews</p>
+          <img src="assets/ai/JiyQTHaeZEforxp0mnvLh4sHpi0.png" alt="">
+        </div>
+        <div class="col" style="align-items:flex-start;gap:35px;width:270.67px;max-width:100%">
+          <p class="t-g12-400">Error State</p>
+          <img src="assets/ai/DcPw3dlRV8Tvz8R0Ohaj2JNWp7s.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:74px;padding-bottom:74px;gap:62px">
+      <p class="t-g22-400-b">AI Summary Feedback Flow on M-Web</p>
+      <img src="assets/ai/e64v8TWeLGIUV53ExCj5SHuiTUo.png" alt="">
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:80px;padding-bottom:80px;gap:80px;align-items:center">
+      <p class="t-g22-400-b">Final Design Hand off “ AI summary with Paragraph” on App</p>
+      <div class="row" style="justify-content:center;align-items:flex-start;gap:34px">
+        <div class="col" style="justify-content:center;align-items:center;gap:14px;width:270.66px;max-width:100%">
+          <p class="t-g12-400">Product has more than<br>100 reviews</p>
+          <img src="assets/ai/YZIwqxfF1xbNUWfJQ2K3NGhMg.png" alt="">
+        </div>
+        <div class="col" style="justify-content:center;align-items:center;gap:14px;width:270.67px;max-width:100%">
+          <p class="t-g12-400">Product has less than 100 review or with no reviews</p>
+          <img src="assets/ai/FfO2d4exwAzX4Kx9uoAUoHgTc.png" alt="">
+        </div>
+        <div class="col" style="justify-content:center;align-items:center;gap:30px;width:270.67px;max-width:100%">
+          <p class="t-g12-400">Error State</p>
+          <img src="assets/ai/2dA11kF6mbEW8cNwkwsaTodn67c.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:80px;padding-bottom:90px;gap:94px;align-items:center">
+      <p class="t-g22-400-b">Final Design Hand off “ AI summary with Paragraph” on Desktop</p>
+      <div class="row" style="justify-content:center;align-items:flex-start;gap:20px">
+        <div class="col" style="justify-content:center;align-items:center;gap:10px;width:430px;max-width:100%">
+          <p class="t-g12-400">Product has more than 100 reviews</p>
+          <img src="assets/ai/xLPmrRVS2GqQYYVwPSIPOYu1Ic.png" alt="">
+        </div>
+        <div class="col" style="justify-content:center;align-items:center;gap:10px;width:430px;max-width:100%">
+          <p class="t-g12-400">Product has less than 100 review </p>
+          <img src="assets/ai/AI6Jyz9ijDT3gxN3RwRhsAdm0mk.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--grey" style="padding-top:47px;padding-bottom:80px;gap:89px;align-items:center">
+      <p class="t-g22-400-b">Final Design Prototype</p>
+      <div class="row" style="justify-content:center;align-items:flex-start;gap:10px">
+        <div class="col" style="justify-content:center;align-items:center;gap:26px;width:435px;max-width:100%">
+          <p class="t-g18-400-b">M-web</p>
+          <video src="assets/ai/PNuIhJyvRJQfXygJisui1pJDhU.mp4" autoplay muted loop playsinline style="width:273px;height:554.22px"></video>
+        </div>
+        <div class="col" style="justify-content:center;align-items:center;gap:26px;width:435px;max-width:100%">
+          <p class="t-g18-400-b">App</p>
+          <video src="assets/ai/ubgeWS06iNFc0do24U9FGAht7c.mp4" autoplay muted loop playsinline style="width:273px;height:560.97px"></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:68px;padding-bottom:220px;gap:100px;align-items:center">
+      <p class="t-g22-400-b">Impact of AI Summary Design</p>
+      <div class="row" style="align-items:flex-start;gap:63px">
+        <div class="col" style="justify-content:center;align-items:center;gap:32px;width:251.33px;max-width:100%">
+          <img src="assets/ai/wfK4gZtOGz0IGRcLSC51K4Piis.png" alt="" style="width:53px">
+          <p class="t-i14-400-b">13% add-to-cart increase  </p>
+        </div>
+        <div class="col" style="justify-content:center;align-items:center;gap:32px;width:251.34px;max-width:100%">
+          <img src="assets/ai/im0Vmq62Knb0B1iMBXXIhkyLMZg.png" alt="" style="width:58px">
+          <p class="t-i14-400-b">66% found summary helpful </p>
+        </div>
+        <div class="col" style="justify-content:center;align-items:center;gap:32px;width:251.33px;max-width:100%">
+          <img src="assets/ai/tCTaB0PxSsVx0HttxrT59OFhR0.png" alt="" style="width:56px">
+          <p class="t-i14-400-b">17% of users clicked 'See all reviews' indicating the summary met user needs </p>
+        </div>
+      </div>
+    </section>
+
+    </div>
+  </main>
+</div>
+<script src="js/case-study-ai.js"></script>
+</body>
+</html>
