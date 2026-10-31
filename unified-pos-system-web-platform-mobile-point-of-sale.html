@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POS X Reimagining Store POS | Manisha Devi</title>
+  <meta name="description"
+    content="Case study: designing a faster, more flexible point-of-sale for Victoria's Secret stores, on web and mobile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&family=Instrument+Serif&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/case-study.css">
+</head>
+
+<body>
+  <div class="page" id="page">
+
+    <header class="hero">
+      <img class="hero__hand" src="assets/pos/myviafC309joAyOyUd6RKrBtE.png" alt="Hand holding a phone">
+      <video class="hero__video" src="assets/pos/intro.mp4" poster="assets/pos/intro-poster.png" autoplay muted loop
+        playsinline></video>
+      <span class="hero__island"></span>
+    </header>
+
+    <main class="doc">
+
+      <section class="blk blk--flow">
+        <h2 class="hd-title h34">Reimagining the store POS</h2>
+        <div class="hd-card">
+        <p class="hd-hmw"><b>How might we</b> help new and experienced Victoria’s Secret store staff complete sales quickly at the checkout counter or anywhere on the shop floor using handheld devices, reducing peak-season queues and creating more sales opportunities by recommending alternatives?</p>
+        <div class="f-meta">
+          <div>
+            <p class="f-label">My role</p>
+            <p class="f-val">Senior UX Designer, generative & evaluative research</p>
+          </div>
+          <div>
+            <p class="f-label">Timeline</p>
+            <p class="f-val">6 months</p>
+          </div>
+          <div>
+            <p class="f-label">Team</p>
+            <p class="f-val">1 UX, 2 PM, 5 engineers, legal &  compliance</p>
+          </div>
+          <div>
+            <p class="f-label">Platform</p>
+            <p class="f-val">Web & mobile POS</p>
+          </div>
+        </div>
+        </div>
+        <h2 class="t t-h27 f-h2 ov-title h34">Project overview</h2>
+<h2 class="ov-hl ov-lead">Victoria’s Secret was using an old Oracle POS, and it had the following issues.</h2>
+        <div class="ov-tiles">
+          <div class="ov-tile"><span class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg></span><strong>End of life</strong><span class="ov-tx">Oracle POS, no vendor support</span></div>
+          <div class="ov-tile"><span class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="7" rx="1.5"/><path d="M6 16v4M18 16v4M7 9V5h10v4"/></svg></span><strong>Counter only</strong><span class="ov-tx">no selling on the shop floor</span></div>
+          <div class="ov-tile"><span class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 7l3-3 3 3-3 3M3 21l9-9M12 12l2-2"/></svg></span><strong>High maintenance</strong><span class="ov-tx">legacy code made every change slow and costly</span></div>
+          <div class="ov-tile"><span class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M17 8h4M19 6v4"/></svg></span><strong>Longer onboarding</strong><span class="ov-tx">a complex system took longer to train new hires on</span></div>
+        </div>
+        </section>
+
+      <section id="tldr" data-chapter="TL;DR" data-outline="TL;DR" class="blk blk--flow tl-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2 h34">TL;DR</h2>
+        <p class="f-lead">for the curious minds who are interested in conclusion</p>
+        <div class="tl-rows">
+          <article class="tl-row"><div class="tl-row__head"><h3>Pricing</h3></div><div class="tl-pair"><figure><p class="e2e-lab"><span class="e2e-tag e2e-tag--b">Before</span></p><div class="e2e-scr"><button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-pricing.png" aria-label="Enlarge: Legacy Pricing screen, before redesign"><img src="assets/pos/e2e/legacy-pricing.png" alt="Legacy Pricing screen, before redesign" loading="lazy"></button></div></figure><figure><p class="e2e-lab"><span class="e2e-tag e2e-tag--a">After</span></p><div class="e2e-scr"><button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-1-screen.png" aria-label="Enlarge: New Transaction Discounts modal, after redesign"><img src="assets/pos/concepts/pricing-1-screen.png" alt="New Transaction Discounts modal, after redesign" loading="lazy"></button></div></figure></div></article>
+          <article class="tl-row tl-row-add-to-cart"><div class="tl-row__head"><h3>Add to cart</h3></div><div class="tl-pair"><figure><p class="e2e-lab"><span class="e2e-tag e2e-tag--b">Before</span></p><div class="e2e-scr"><button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-verify.png" aria-label="Enlarge: Legacy Transaction Entry screen, before redesign"><img src="assets/pos/e2e/legacy-verify.png" alt="Legacy Transaction Entry screen, before redesign" loading="lazy"></button></div></figure><figure><p class="e2e-lab"><span class="e2e-tag e2e-tag--a">After</span></p><div class="e2e-scr"><button type="button" class="c-zoom" data-src="assets/pos/e2e/new-bag.png" aria-label="Enlarge: New shopping bag screen, after redesign"><img src="assets/pos/e2e/new-bag.png" alt="New shopping bag screen, after redesign" loading="lazy"></button></div></figure></div></article>
+        </div>
+        <h3 class="tl-goal-h h34">Goals and impact</h3>
+        <div class="tl-imps tl-goals">
+          <div class="tl-imp">
+              <p class="tl-imp-t"><span aria-hidden="true">⏱️</span> Faster checkout</p>
+              <p class="tl-imp-n">5–8 min</p>
+              <p class="tl-imp-s">average checkout time, down from 20–25 min</p>
+          </div>
+          <div class="tl-imp">
+              <p class="tl-imp-t"><span aria-hidden="true">📈</span> Associates chose it</p>
+              <p class="tl-imp-n">85%</p>
+              <p class="tl-imp-s">adoption across stores</p>
+          </div>
+          <div class="tl-imp">
+              <p class="tl-imp-t"><span aria-hidden="true">🏬</span> Built to scale</p>
+              <p class="tl-imp-n">1000+</p>
+              <p class="tl-imp-s">stores worldwide run the new POS</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" data-chapter="Research" data-outline="Research" class="blk blk--flow pr-sec" style="background:#fff">
+        <h3 class="f-h h34">How we found the right problem</h3>
+        <div class="pr">
+          <div class="pr-step">
+            <div class="pr-n">01</div>
+            <div class="pr-body">
+              <h4 class="pr-h">Understood the ecosystem</h4>
+              <div class="pr-hub">
+                <svg viewBox="0 0 700 340" preserveAspectRatio="none" aria-hidden="true"><line x1="350" y1="170" x2="110" y2="50"/><line x1="350" y1="170" x2="350" y2="30"/><line x1="350" y1="170" x2="590" y2="50"/><line x1="350" y1="170" x2="110" y2="290"/><line x1="350" y1="170" x2="350" y2="310"/><line x1="350" y1="170" x2="590" y2="290"/></svg>
+                <div class="pr-hub__core">One associate, one sale</div>
+                <div class="pr-hub__node" style="left:15%; top:15%"><b>Product discovery</b>Size, colour, availability</div>
+                <div class="pr-hub__node" style="left:50%; top:9%"><b>Transaction management</b>Items, quantities, basket</div>
+                <div class="pr-hub__node" style="left:85%; top:15%"><b>Pricing and promotions</b>Discounts, taxes, total</div>
+                <div class="pr-hub__node" style="left:15%; top:85%"><b>Payment</b>Tender and receipt</div>
+                <div class="pr-hub__node" style="left:50%; top:91%"><b>Post-purchase service</b>Returns, exchanges</div>
+                <div class="pr-hub__node pr-hub__node--hl" style="left:85%; top:85%"><b>Assisted online ordering</b>Sell what the store doesn&#x27;t have</div>
+              </div>
+            </div>
+          </div>
+          <div class="pr-step">
+            <div class="pr-n">02</div>
+            <div class="pr-body">
+              <h4 class="pr-h">User groups that we identified</h4>
+              <div class="pr-ug-grid">
+                <div class="pr-ug">
+                  <img class="pr-ug__av" src="assets/pos/persona-checkout.svg" alt="">
+                  <b class="pr-ug__n">Checkout Specialists</b>
+                  <span class="pr-ug__w">Primarily at cash wrap/checkout counters</span>
+                </div>
+                <div class="pr-ug">
+                  <img class="pr-ug__av" src="assets/pos/6UtgmeYKBIOfxy7ngPVwVygU.png" alt="">
+                  <b class="pr-ug__n">Floor Advisor</b>
+                  <span class="pr-ug__w">On the sales floor assisting customers</span>
+                </div>
+                <div class="pr-ug">
+                  <img class="pr-ug__av" src="assets/pos/IqdZj4HPoFXfmFuLBtswoRTVSEk.png" alt="">
+                  <b class="pr-ug__n">Hybrid Associates</b>
+                  <span class="pr-ug__w">Switch between floor &amp; counter depending on rush hours</span>
+                </div>
+                <div class="pr-ug">
+                  <img class="pr-ug__av" src="assets/pos/QgPLPcC8wHxkeAuV6icyXZQWNg.png" alt="">
+                  <b class="pr-ug__n">New &amp; Part-Time Associate</b>
+                  <span class="pr-ug__w">Work seasonal or part-time shifts, often at the counter during peak hours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pr-step">
+            <div class="pr-n">03</div>
+            <div class="pr-body">
+              <h4 class="pr-h">Watch them work - User interviews and field study</h4>
+              <div class="pr-stats">
+                <div class="pr-stat"><strong>50+</strong><span>associates took part, North America</span></div>
+                <div class="pr-stat"><strong>20</strong><span>stores visited in North America</span></div>
+                <div class="pr-stat"><strong>2</strong><span>shifts observed: peak and off-peak</span></div>
+              </div>
+              <table class="f-table f-table--plan">
+                <thead>
+                  <tr>
+                    <th>Participant group</th>
+                    <th>What to investigate</th>
+                    <th>Why</th>
+                    <th>How</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Experienced cashiers</td>
+                    <td>Shortcuts, established mental models, frequent tasks</td>
+                    <td>They set the speed benchmark, so the new design must not slow down what they already do fast.</td>
+                    <td>Scan items, apply a discount, complete payment</td>
+                  </tr>
+                  <tr>
+                    <td>Newer associates</td>
+                    <td>Learnability and discoverability</td>
+                    <td>Training took longer because of the system&#x27;s complexity, so they show where new users get lost.</td>
+                    <td>Find a product, correct an incorrect quantity</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pr-art">
+                <div>
+                  <img class="f-img" src="assets/pos/YytiFJi5dh6OLrPkiF5zXsikZIY.png" alt="Current user flow diagram">
+                  <a class="pr-link" href="https://www.figma.com/board/oK2U4UYdOzoXHE4EDLdNOV/POS-Workflow?node-id=1-367&amp;t=NfE1mWyhPa8qLFMh-1" target="_blank" rel="noopener">View user flow <span aria-hidden="true">↗</span></a>
+                </div>
+                <div>
+                  <img class="f-img" src="assets/pos/cdwbqI7JbtPEG0J2Sa29oPbt3M.png" alt="Affinity mapping board">
+                  <a class="pr-link" href="https://miro.com/app/board/uXjVHhGksXw=/?share_link_id=394724328454" target="_blank" rel="noopener">View Miro board <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section id="why-broken" data-outline="What we discovered" data-outline-short="What we|discovered" class="blk blk--flow wy-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2 h34">What we discovered</h2>
+        <div class="pr-find-grid">
+          <div class="pr-find">
+            <strong>70-80%</strong>
+            <div>
+              <b>Fragmented UX</b>
+              <p>Unclear navigation, ungrouped actions and no contextual next step slowed product discovery and checkout.</p>
+            </div>
+          </div>
+          <div class="pr-find">
+            <strong>80%</strong>
+            <div>
+              <b>Complex checkout workflows</b>
+              <p>Discounts, price adjustments, payments, and refunds made checkout cumbersome</p>
+            </div>
+          </div>
+          <div class="pr-find">
+            <strong>80%</strong>
+            <div>
+              <b>Simple tasks felt complicated</b>
+            </div>
+          </div>
+          <div class="pr-find">
+            <strong>65%</strong>
+            <div>
+              <b>Slow onboarding</b>
+              <p>Complex workflows increased training time and reduced staff efficiency.</p>
+            </div>
+          </div>
+        </div>
+        <h2 class="t t-h27 f-h2 wy-sub--why h34">Asking why</h2>
+        <div class="wy">
+          <p class="wy-hd">What they said</p>
+          <i></i>
+          <p class="wy-hd">Why?</p>
+          <i></i>
+          <p class="wy-hd">Why?</p>
+          <i></i>
+          <p class="wy-hd">Root cause</p>
+          <div class="wy-said"><p>“I don’t know where to go next”</p><small>70–80% of associates</small></div>
+          <i class="wy-ar">→</i>
+          <div class="wy-bx">No contextual navigation: from Transaction Entry, nothing points to where a discount is applied</div>
+          <i class="wy-ar">→</i>
+          <div class="wy-bx">Related actions aren’t grouped: Pricing and Price Override are separate modules in a fixed numbered menu</div>
+          <i class="wy-ar">→</i>
+          <div class="wy-rc">The system was organised by module, not by task</div>
+          <div class="wy-said"><p>“New hires lean on manuals and colleagues”</p><small>65% of associates</small></div>
+          <i class="wy-ar">→</i>
+          <div class="wy-bx">Every screen needs a module number and an internal code</div>
+          <i class="wy-ar">→</i>
+          <div class="wy-bx">Terms such as GWP, Redline and % TRANS explain nothing on their own</div>
+          <i class="wy-ar">→</i>
+          <div class="wy-rc">The UI assumed associates had memorised the training</div>
+        </div>
+        <div class="wy-root">
+          <h2 class="t t-h27 f-h2 wy-core h34">What was the core problem</h2>
+          <ul class="ov-problems">
+            <li><b>Module-driven.</b> Associates had to memorize module codes and navigate between disconnected functions to complete a sale.</li>
+            <li><b>Data and workflow friction.</b> Prices, discounts and transaction totals weren’t consistently reflected across screens, forcing associates to cross-check information before proceeding.</li>
+            <li><b>Decision-making breakdown.</b> Unclear pricing options and limited visibility into discount rules made it harder to choose the right action and verify whether adjustments were applied correctly.</li>
+            <li><b>Business and revenue impact.</b> Extra navigation and manual checks slowed peak-hour checkout, increased the risk of pricing errors and made onboarding new associates harder.</li>
+          </ul>
+        </div>
+      </section>
+      <section id="journey" data-outline="Journey map" class="blk blk--flow jm-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2">Journey map: finding opportunity areas</h2>
+        <div class="jx">
+          <div class="jx-phases">
+            <div style="grid-column:span 2"><b>Add to cart</b><em>Redesign focus</em></div>
+            <div style="grid-column:span 2"><b>Pricing workflow</b><em>Redesign focus</em></div>
+            <div class="is-dim" style="grid-column:span 2"><b>Shipping and payment</b></div>
+          </div>
+          <div class="jx-route">
+            <svg viewBox="0 0 1240 290" preserveAspectRatio="none" aria-hidden="true"><path class="jx-t" d="M0 170 H24 C129 170 129 226 234 226 C339 226 339 226 445 226 C550 226 550 226 656 226 C761 226 761 170 866 170 C971 170 971 226 1077 226 H1240"/><path class="jx-back" d="M656 200 C656 104 234 104 234 200"/><path class="jx-back" d="M1077 200 C1077 8 234 8 234 200"/><path class="jx-chev is-re" d="M-3 -5 3 0 -3 5" transform="translate(234 196) rotate(90)"/></svg>
+            <span class="jx-tag" style="left:35.887%; top:121px">Back to check the discount</span>
+            <span class="jx-tag" style="left:35.887%; top:43px">Back to fetch the total</span>
+            <div class="jx-stop" style="left:1.935%; top:170px">1</div><span class="jx-feel" style="left:0.323%; top:196px">Unsure</span><div class="jx-stop" style="left:18.871%; top:226px">2</div><span class="jx-feel" style="left:17.258%; top:252px">Overloaded</span><div class="jx-stop" style="left:35.887%; top:226px">3</div><span class="jx-feel" style="left:34.274%; top:252px">Doubtful</span><div class="jx-stop" style="left:52.903%; top:226px">4</div><span class="jx-feel" style="left:51.290%; top:252px">Frustrated</span><div class="jx-stop is-dim" style="left:69.839%; top:170px">5</div><span class="jx-feel is-dim" style="left:68.226%; top:196px">Impatient</span><div class="jx-stop is-dim" style="left:86.855%; top:226px">6</div><span class="jx-feel is-dim" style="left:85.242%; top:252px">Pressured</span>
+          </div>
+          <p class="jx-hint">The lower the line, the more friction we saw.</p>
+          <div class="jx-cols jx-names"><h3 class="">Find the item</h3><h3 class="">Add it to the sale</h3><h3 class="">Apply a discount</h3><h3 class="">Check the total</h3><h3 class="is-dim">Ship to home</h3><h3 class="is-dim">Take payment</h3></div>
+          <div class="jx-row jx-row--do"><h4>What the associate does</h4><div class="jx-cols"><p class="">Searches the item, then <b>copies it</b> to the sale screen</p><p class=""><b>Posts each item</b> by hand</p><p class="">Opens a separate screen and <b>re-types the ID</b></p><p class=""><b>Goes back</b> to see if the discount landed</p><p class="is-dim"><b>Re-types the ID</b>, then adds address and delivery</p><p class="is-dim"><b>Fetches the total</b>, then submits</p></div></div>
+          <div class="jx-row jx-row--pain"><h4>What got in the way</h4><div class="jx-cols"><p class="">Finding an item <b>doesn’t add it</b></p><p class=""><b>Extra step</b> per item, and lines are <b>hard to scan</b></p><p class=""><b>Two modules</b> for one job, with <b>cryptic codes</b></p><p class=""><b>A trip back</b> just to check the result</p><p class="is-dim"><b>ID typed again</b>, and delivery is <b>one long dropdown</b></p><p class="is-dim">Shows <b>$0.00</b> until the total is fetched</p></div></div>
+          <div class="jx-row jx-row--opp"><h4>What we could do instead</h4><div class="jx-cols"><p class=""><b>One search</b>, then add to bag from the product page</p><p class="">Items <b>land in the bag</b> as soon as they are added</p><p class=""><b>One discount entry</b>, with the new price shown before Apply</p><p class="">Apply returns to the bag with the <b>total updated</b></p><p class="is-dim"><b>Order carries over</b>, with clear delivery cards</p><p class="is-dim"><b>Balance filled in</b>, on a screen called Payment</p></div></div>
+        </div>
+      </section>
+      <section class="blk" style="height:1040px; background:rgb(246,246,246)">
+<div class="fx" style="--shift: calc(var(--gutter) - 58px - (100vw - 1044px) / 2)">
+        <h3 class="a t t-h23 t-center h34" style="left:61px; top:80px; width:113px; line-height:25px">Patterning</h3>
+        <img class="a" src="assets/pos/xgF5cq6BnwhCfd8ulWiHVO9jGY.png" alt=""
+          style="left:58px; top:163px; width:518px; height:236px">
+        <img class="a" src="assets/pos/uZk4tEW52yjEU2E2unnKuQBbryo.png" alt=""
+          style="left:58px; top:399px; width:522px; height:268px">
+        <img class="a" src="assets/pos/d27iGBeNJaWvwzvLh5Bb4FIjxY.png" alt=""
+          style="left:580px; top:163px; width:366px; height:504px">
+        <h4 class="a t t-h23" style="left:61px; top:716px; width:600px; line-height:30px">Learnings from these POS patterns</h4>
+        <ol class="a t t-card t-learn" style="left:61px; top:766px; width:885px">
+          <li>Start screens from the associate's tasks</li>
+          <li>Make main targets large and few</li>
+          <li>Keep payment short and guided</li>
+          <li>Tuck rare actions under More</li>
+          <li>Keep search always in reach</li>
+        </ol>
+      </div>
+      </section>
+
+      <section id="ia" data-chapter="Design" data-outline="Information architecture" data-outline-short="IA" class="blk blk--flow ia-sec" style="background:#fff">
+        <h2 class="e2e-hl h34">IA - Organised by what associates are trying to do</h2>
+
+        <div class="ia-tree">
+          <div class="ia-layer"><p class="ia-ll"><b>Always on screen</b>Global</p>
+            <div class="ia-global"><span class="ia-g">Search <span>&middot; name, number, barcode, size, colour</span></span><span class="ia-g">Shopping bag <span>&middot; item count</span></span><span class="ia-g">Customer <span>&middot; member status</span></span><span class="ia-g">Associate menu</span><span class="ia-g">Register status</span></div></div>
+          <div class="ia-layer"><p class="ia-ll"><b>Intent</b>What they want</p>
+            <div class="ia-cols"><div class="ia-int">Find</div><div class="ia-int">Sell</div><div class="ia-int">Price</div><div class="ia-int">Pay</div><div class="ia-int">Fix</div></div></div>
+          <div class="ia-layer"><span></span><div class="ia-down"><span>&darr;</span><span>&darr;</span><span>&darr;</span><span>&darr;</span><span>&darr;</span></div></div>
+          <div class="ia-layer"><p class="ia-ll"><b>Place</b>Where it lives</p>
+            <div class="ia-cols">
+              <div class="ia-place"><span class="ia-tag"></span><h4>Search &amp; catalogue</h4><ul><li><b>Search</b> or scan</li><li><b>Categories</b> &middot; Bras, Panties, Sleep, Sport, Swim, Accessories, Beauty</li><li><b>Results</b> &middot; filters for size, colour, brand</li><li><b>Product page</b> &middot; colour, band, cup, stock, promos</li><li><b>Add to bag</b> &middot; straight into the sale</li></ul></div>
+              <div class="ia-place"><span class="ia-tag"></span><h4>Shopping bag</h4><ul><li><b>Scan bar</b> &middot; SKUs, gift cards, offers, return barcodes</li><li><b>Items</b> &middot; store and online, promo and was / now price on each line</li><li><b>Live summary</b> &middot; every discount itemised</li><li><b>Quick actions</b> &middot; Online items, Transaction discounts, Tax options, Return lookup, Member rewards &amp; offers, Reprint receipt</li><li><b>Continue</b> to shipping and payment</li></ul></div>
+              <div class="ia-place"><span class="ia-tag"></span><h4>Discounts &amp; tax</h4><ul><li><b>Transaction discounts</b> &middot; Override, Discount, Price adjustment, Employee</li><li>$ or %, reason, new price and approval limit before Apply</li><li><b>Tax options</b> &middot; pick items, adjustment, reason</li></ul></div>
+              <div class="ia-place"><span class="ia-tag"></span><h4>Shipping &amp; payment</h4><ul><li><b>Shipping</b> &middot; saved address, or a new one in separate fields</li><li><b>Delivery</b> &middot; options with date and cost</li><li><b>Balance due</b> &middot; filled in, in-store and online totals</li><li><b>Methods</b> &middot; Credit/debit, VS/PINK card lookup, Gift card, Cash</li><li><b>Receipt</b> &middot; print, email or both</li></ul></div>
+              <div class="ia-place"><span class="ia-tag"></span><h4>Return lookup</h4><ul><li><b>Find the sale</b> &middot; receipt, phone or email</li><li>Return or exchange</li><li>Price adjustment</li><li>Reprint receipt</li></ul></div>
+            </div></div>
+        </div>
+
+        <h3 class="ia-h h34">How the user groups shaped it.</h3>
+        <div class="ia-pr">
+          <div><b>Floor advisors start at Find.</b><p>On the mobile POS, search and the catalogue come first, because their job begins with "Do we have it?"</p></div>
+          <div><b>Checkout specialists live in the bag.</b><p>Discounts, returns and payment are one tap from the bag, because that is where the queue is.</p></div>
+          <div><b>New associates get the same map.</b><p>Five plain-language places instead of eight module numbers is what makes it teachable in a shift.</p></div>
+        </div>
+      </section>
+
+      <section id="concepts-cart" data-outline="Concepts: Add to cart" data-outline-short="Concepts:|Add to cart" class="blk blk--flow c-sec c-sec--wide c-sec--wide3" style="background:#f7f7f7">
+        <h3 class="f-h h34">Add to cart</h3>
+        <div class="c-tabs" role="tablist">
+          <button type="button" class="c-tab is-on" role="tab" aria-selected="true" aria-controls="concepts-cart-p1" id="concepts-cart-t1">Concept 1</button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="concepts-cart-p2" id="concepts-cart-t2">Concept 2</button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="concepts-cart-p3" id="concepts-cart-t3">Concept 3<span class="c-badge">Chosen</span></button>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-cart-p1" aria-labelledby="concepts-cart-t1">
+          <p class="c-q">HMW bring the whole checkout onto one screen without overwhelming the associate?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-verify.png" aria-label="Enlarge: Before screen, concept 1">
+                <img src="assets/pos/e2e/legacy-verify.png" alt="Before screen, concept 1">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Many clicks to search by keyword or filter</p>
+                <p class="c-pt"><span>❌</span> Tiny dropdowns for size and color</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-1-screen.png" aria-label="Enlarge: After screen, concept 1">
+                <img src="assets/pos/concepts/cart-1-screen.png" alt="After screen, concept 1">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> The whole checkout on one screen: items, totals, shipping and payment</p>
+                <p class="c-pt"><span>✅</span> Cards separate each group, so a busy screen stays easy to scan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-cart-p2" aria-labelledby="concepts-cart-t2" hidden>
+          <p class="c-q">HMW keep the bag focused on reviewing items and totals, and move everything else out of the way?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-verify.png" aria-label="Enlarge: Before screen, concept 2">
+                <img src="assets/pos/e2e/legacy-verify.png" alt="Before screen, concept 2">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Checkout only at fixed counters</p>
+                <p class="c-pt"><span>❌</span> Queues build at peak hours</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-2-screen.png" aria-label="Enlarge: After screen, concept 2">
+                <img src="assets/pos/concepts/cart-2-screen.png" alt="After screen, concept 2">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> Only item cards, offers and totals in the bag</p>
+                <p class="c-pt"><span>✅</span> Shipping and payment move to their own steps</p>
+                <p class="c-pt"><span>✅</span> Less-used actions sit under More options, so there are fewer choices</p>
+                <p class="c-pt"><span>✅</span> One primary button: CONTINUE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-cart-p3" aria-labelledby="concepts-cart-t3" hidden>
+          <p class="c-q">HMW let associates verify the bag first, with every other action one tap away, in a layout they already know?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-verify.png" aria-label="Enlarge: Before screen, concept 3">
+                <img src="assets/pos/e2e/legacy-verify.png" alt="Before screen, concept 3">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Too many steps to order on a customer&#x27;s behalf</p>
+                <p class="c-pt"><span>❌</span> Rewards sign-up took over 5 minutes</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/cart-3-screen.png" aria-label="Enlarge: After screen, concept 3">
+                <img src="assets/pos/concepts/cart-3-screen.png" alt="After screen, concept 3">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> Scan bar on top, the fastest way to add an item at the counter</p>
+                <p class="c-pt"><span>✅</span> Items, then totals: verify the bag and discounts before anything else</p>
+                <p class="c-pt"><span>✅</span> Secondary actions in a quick action panel on the right, where the legacy menu sat, so retraining stays small</p>
+                <p class="c-pt"><span>✅</span> One primary button: CONTINUE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+      <section id="concepts-pricing" data-outline="Concepts: Pricing workflow" data-outline-short="Concepts:|Pricing workflow" class="blk blk--flow c-sec c-sec--wide c-sec--wide3" style="background:#f7f7f7">
+        <h3 class="f-h h34">Pricing workflow</h3>
+        <div class="c-tabs" role="tablist">
+          <button type="button" class="c-tab is-on" role="tab" aria-selected="true" aria-controls="concepts-pricing-p1" id="concepts-pricing-t1">Concept 1<span class="c-badge">Chosen</span></button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="concepts-pricing-p2" id="concepts-pricing-t2">Concept 2</button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="concepts-pricing-p3" id="concepts-pricing-t3">Concept 3</button>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-pricing-p1" aria-labelledby="concepts-pricing-t1">
+          <p class="c-q">HMW let associates find every discount type from one place?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-pricing.png" aria-label="Enlarge: Before screen, concept 1">
+                <img src="assets/pos/e2e/legacy-pricing.png" alt="Before screen, concept 1">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Four discount categories sit in a long form</p>
+                <p class="c-pt"><span>❌</span> Internal codes and no hint about which discounts can combine</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-1-screen.png" aria-label="Enlarge: After screen, concept 1">
+                <img src="assets/pos/concepts/pricing-1-screen.png" alt="After screen, concept 1">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> One modal, four tabs: Override, Discount, Price adjustment, Employee</p>
+                <p class="c-pt"><span>✅</span> Item, amount, $ / %, reason and approval limit on one screen</p>
+                <p class="c-pt"><span>✅</span> The new price shows before Apply</p>
+                <p class="c-pt"><span>✅</span> Switching discount type is one tap, with no going back</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-pricing-p2" aria-labelledby="concepts-pricing-t2" hidden>
+          <p class="c-q">HMW let associates change a price on the item line, without leaving the cart?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-pricing.png" aria-label="Enlarge: Before screen, concept 2">
+                <img src="assets/pos/e2e/legacy-pricing.png" alt="Before screen, concept 2">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Associates leave the cart to change one price</p>
+                <p class="c-pt"><span>❌</span> Many separate screens for one sale</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-2-screen.png" aria-label="Enlarge: After screen, concept 2">
+                <img src="assets/pos/concepts/pricing-2-screen.png" alt="After screen, concept 2">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> The discount is edited on the item line, so the associate never loses sight of what is changing</p>
+                <p class="c-pt"><span>✅</span> Only item-level options appear on a line. Employee, which covers the whole sale, stays out</p>
+                <p class="c-pt"><span>✅</span> A warning shows how the change re-prices other promotions before Apply</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel" role="tabpanel" id="concepts-pricing-p3" aria-labelledby="concepts-pricing-t3" hidden>
+          <p class="c-q">HMW guide a new associate to the right discount, one step at a time?</p>
+          <div class="c3">
+            <div class="c3-col">
+              <p class="c3-lab">Before</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-pricing.png" aria-label="Enlarge: Before screen, concept 3">
+                <img src="assets/pos/e2e/legacy-pricing.png" alt="Before screen, concept 3">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>❌</span> Associates must know which category to pick</p>
+                <p class="c-pt"><span>❌</span> Nothing explains what each option does</p>
+              </div>
+            </div>
+            <div class="c3-col">
+              <p class="c3-lab">After</p>
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-3-screen.png" aria-label="Enlarge: After screen, concept 3">
+                <img src="assets/pos/concepts/pricing-3-screen.png" alt="After screen, concept 3">
+              </button>
+              <div class="c3-pts">
+                <p class="c-pt"><span>✅</span> Step 1: pick the discount type from four described cards</p>
+                <p class="c-pt"><span>✅</span> Step 2: choose $ or %, and a reason</p>
+                <p class="c-pt"><span>✅</span> Step 3: check the recalculated price, then Confirm</p>
+                <p class="c-pt"><span>✅</span> One decision per step, with progress shown at the top</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+      <section id="testing" data-outline="Usability testing" class="blk blk--flow ut-sec" style="background:rgb(246,246,246)">
+        <h2 class="t t-h27 f-h2 h34">Associates tried both concepts before we built them.</h2>
+        <p class="f-lead">We ran 84 moderated sessions in two rounds across 12 stores, with experienced cashiers, newer associates and floor advisors, on a clickable prototype. Each associate did two tasks while thinking aloud, and we changed the design between rounds.</p>
+        <div class="ut-grid">
+          <article class="ut-card">
+            <div class="ut-shot">
+              <button type="button" class="c-zoom" data-src="assets/pos/e2e/new-bag.png" aria-label="Enlarge: Concept 3 · Add to cart">
+                <img src="assets/pos/e2e/new-bag.png" alt="Concept 3 · Add to cart" loading="lazy">
+              </button>
+            </div>
+            <div class="ut-body">
+              <p class="ut-concept">Concept 3 · Add to cart</p>
+              <div class="ut-task">
+                <span>Task</span>
+                <p>Find the Smooth Push-Up Bra in 32AA. It is not in store, so order it online for her.</p>
+              </div>
+              <dl class="ut-dl">
+                <div>
+                  <dt>What we saw</dt>
+                  <dd>Most associates found the bra in seconds, but when the size was out of stock many stopped and looked for a separate online-order button. A few newer associates added it to the bag without realising it would ship to the customer.</dd>
+                </div>
+                <div>
+                  <dt>What we changed</dt>
+                  <dd>We put “Not in store? Order online” right on the out-of-stock size, and tagged online items in the bag with a clear “Ships to customer” label.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>In round two, 38 of 42 associates placed the online order without help, up from 27 of 42. Time to place it dropped from about 2 min 40 s to just over a minute.</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+          <article class="ut-card">
+            <div class="ut-shot">
+              <button type="button" class="c-zoom" data-src="assets/pos/concepts/pricing-1-screen.png" aria-label="Enlarge: Concept 1 · Discounts and payment">
+                <img src="assets/pos/concepts/pricing-1-screen.png" alt="Concept 1 · Discounts and payment" loading="lazy">
+              </button>
+            </div>
+            <div class="ut-body">
+              <p class="ut-concept">Concept 1 · Discounts and payment</p>
+              <div class="ut-task">
+                <span>Task</span>
+                <p>Her coupon didn&#x27;t scan. Take $5 off the Tease Bridal Cap-Sleeve, then take payment by card.</p>
+              </div>
+              <dl class="ut-dl">
+                <div>
+                  <dt>What we saw</dt>
+                  <dd>Associates found the Discount tab quickly, but several hesitated between “Coupon not scanning” and “Price adjustment”, and a few applied $5 to the whole bag instead of one item. Experienced cashiers wanted to type the amount rather than tap.</dd>
+                </div>
+                <div>
+                  <dt>What we changed</dt>
+                  <dd>We renamed the reasons in store language, showed the selected item at the top of the modal, kept the amount as a typed field with a $ / % switch, and showed the self-serve limit before Apply so associates know if a manager is needed.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>Wrong-reason picks went from about 1 in 4 sessions to 2 in 42. In round two, 39 of 42 associates finished the discount and card payment unaided.</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="flow-compare" data-chapter="Final solution" data-outline="Checkout flow" class="blk blk--flow uf-sec" style="background:#fff">
+        <p class="t t-eyebrow f-eyebrow">END TO END · CHECKOUT</p>
+        <h2 class="e2e-hl h34">The redesigned sale flow, from search to payment</h2>
+        <div class="ufs ufs--bad" id="flow-bad" data-label="Legacy flow" data-skip="#flow-fix" data-skip-label="Skip to redesigned flow">
+          <div class="ufs-list">
+            <article class="ufs-step">
+              <h4 class="ufs-nm">Transaction Entry</h4>
+              <div class="ufs-grp ufs-grp--flow">
+                <h5>Flow friction to the next screen</h5>
+                <ul class="ufs-pts">
+                  <li class="one">
+                    <span>Associates are often confused about whether to use Pricing / Price override when applying discounts, such as 20% or 30% off</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ufs-grp">
+                <h5>Screen friction</h5>
+                <ul class="ufs-pts">
+                  <li>
+                    <b>1.</b>
+                    <span>Transaction Entry term is counter intuitive</span>
+                  </li>
+                  <li><b>2.</b>
+                    <span>Line posting is needed to product to cart</span>
+                  </li><li><b>3.</b>
+                    <span>Weak visual hierarchy in added cart items</span>
+                  </li><li><b>4.</b><span>No discount against each card item</span>
+                  </li><li><b>5.</b><span>Long product names repeat clutters the list.</span>
+                  </li><li><b>6.</b><span>Absence of product image delay overall task time</span>
+                  </li><li><b>7.</b><span>Primary action button doesn&#x27;t stand out</span>
+                  </li></ul></div><figure class="ufs-fig">
+                  <button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-entry.png" aria-label="Enlarge: Transaction Entry">
+                    <img src="assets/pos/e2e/legacy-entry.png" alt="Transaction Entry" loading="lazy">
+                  </button>
+                </figure>
+              </article><article class="ufs-step">
+              <h4 class="ufs-nm">Item Inquiry</h4>
+              <div class="ufs-grp ufs-grp--flow">
+                <h5>Flow friction to the next screen</h5>
+                <ul class="ufs-pts">
+                  <li class="one">
+                    <span>COPY TO MOD 31 copies field values only. A pop-up prompts associates to navigate to the cart and manually add the product.</span>
+                  </li>
+                </ul>
+              </div>
+              <figure class="ufs-fig">
+                <button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-inquiry.png" aria-label="Enlarge: Item Inquiry">
+                  <img src="assets/pos/e2e/legacy-inquiry.png" alt="Item Inquiry" loading="lazy">
+                </button>
+              </figure>
+            </article>
+            
+              <article class="ufs-step"><h4 class="ufs-nm">Pricing</h4>
+                <div class="ufs-grp ufs-grp--flow"><h5>Flow friction to the next screen</h5>
+                  <ul class="ufs-pts">
+                    <li><b>1.</b>
+                      <span>Multi-step discount application: Applying a discount required selecting a discount type, entering a value, staging it, and then separately committing the pricing.</span>
+                    </li><li><b>2.</b>
+                      <span>The associate goes back to MOD 31 only to check the new total.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ufs-grp"><h5>Screen friction</h5>
+                  <ul class="ufs-pts">
+                    <li><b>1.</b>
+                      <span>Options are system codes: % TRANS, AMT TRANS, % ITEM, AMT ITEM.</span>
+                    </li>
+                    <li><b>2.</b>
+                      <span>Late validation feedback: A missing transaction ID is flagged only after the value is staged.</span>
+                    </li>
+                    <li>
+                      <b>3.</b>
+                      <span>Transaction ID must be re-entered even though it is already available in the context.</span>
+                    </li>
+                  </ul>
+                </div>
+                <figure class="ufs-fig">
+                  <button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-pricing.png" aria-label="Enlarge: Pricing"><img src="assets/pos/e2e/legacy-pricing.png" alt="Pricing" loading="lazy"></button>
+                </figure>
+              </article>
+              <article class="ufs-step">
+                <h4 class="ufs-nm">Transaction Entry, again</h4><div class="ufs-grp"><h5>Screen friction</h5><ul class="ufs-pts"><li class="one"><span>The Discount column in Transaction Lines is still empty, though the summary shows the discount.</span></li></ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-verify.png" aria-label="Enlarge: Transaction Entry, again"><img src="assets/pos/e2e/legacy-verify.png" alt="Transaction Entry, again" loading="lazy"></button></figure></article><article class="ufs-step"><h4 class="ufs-nm">Shipping / Fulfilment</h4><div class="ufs-grp ufs-grp--flow"><h5>Flow friction to the next screen</h5><ul class="ufs-pts"><li class="one"><span>“Tender” is an unfamiliar label. It doesn’t match what new or experienced associates expect, causing a few seconds of confusion.</span></li></ul></div><div class="ufs-grp"><h5>Screen friction</h5><ul class="ufs-pts"><li><b>1.</b><span>Delivery address is a single input field, not split into street, apt / unit, city, state and postal code.</span></li><li><b>2.</b><span>Transaction ID must be re-entered even though it is already available in the context.</span></li></ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-shipping.png" aria-label="Enlarge: Shipping / Fulfilment"><img src="assets/pos/e2e/legacy-shipping.png" alt="Shipping / Fulfilment" loading="lazy"></button></figure></article><article class="ufs-step"><h4 class="ufs-nm">Tender</h4><div class="ufs-grp ufs-grp--flow"><h5>Flow friction to the next screen</h5><ul class="ufs-pts"><li class="one"><span>Unnecessary step: the associate must click READ TOTAL FROM MOD 31 to fetch an amount already available in the transaction context.</span></li></ul></div><div class="ufs-grp"><h5>Screen friction</h5><ul class="ufs-pts"><li><b>1.</b><span>Missing total amount visibility: the amount should be populated automatically.</span></li><li><b>2.</b><span>Unintuitive labels: READ TOTAL FROM MOD 31 and SUBMIT TENDER / F5 use system jargon.</span></li><li><b>3.</b><span>Unclear payment sequence: nothing guides the associate from amount to method to payment to receipt.</span></li><li><b>4.</b><span>Submit Tender is highlighted while the amount due is still $0.00.</span></li></ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-tender.png" aria-label="Enlarge: Tender"><img src="assets/pos/e2e/legacy-tender.png" alt="Tender" loading="lazy"></button></figure></article><article class="ufs-step"><h4 class="ufs-nm">Payment complete</h4><div class="ufs-grp"><h5>Screen friction</h5><ul class="ufs-pts"><li><b>1.</b><span>Payment complete appears as a panel under the tender form, which still shows active Submit Tender and Read Total buttons.</span></li><li><b>2.</b><span>Choosing a receipt takes two steps: pick one of three options, then press Confirm Receipt Option.</span></li><li><b>3.</b><span>Completion is a small “Completed” tag, and nothing offers a next step such as starting a new sale.</span></li><li><b>4.</b><span>Amount Due still reads “Last queried value” after the payment has been taken.</span></li></ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/legacy-paid.png" aria-label="Enlarge: Payment complete"><img src="assets/pos/e2e/legacy-paid.png" alt="Payment complete" loading="lazy"></button></figure></article></div></div><div class="ufs ufs--fix" id="flow-fix" data-label="Redesigned flow" data-skip="#cart-states" data-skip-label="Skip to cart line states"><div class="ufs-list"><article class="ufs-step"><h4 class="ufs-nm">Shopping bag</h4><div class="ufs-grp ufs-grp--flow"></div><div class="uf-why"><p class="uf-why__h"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1.1 1.3 1.1 2.2h5c0-.9.5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg>Design decision</p><ul class="uf-why__list"><li><b>One card per item.</b> Store and online items keep their details together, so associates can scan quickly, even with a queue waiting.</li><li><b>Summary beside the items.</b> Every discount type and the total are highlighted, so associates can tell the customer what was applied.</li><li><b>Actions on the right.</b> The buttons stay where they were in the old system, matching how associates already work.</li><li><b>One primary button.</b> CONTINUE is the clear next step to shipping.</li><li><b>One discounts entry.</b> One Transaction Discounts entry opens from the bag, so there is no Pricing or Price Override choice.</li></ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/new-bag.png" aria-label="Enlarge: Shopping bag"><img src="assets/pos/e2e/new-bag.png" alt="Shopping bag" loading="lazy"></button></figure></article><article class="ufs-step"><h4 class="ufs-nm">Transaction Discounts</h4><div class="uf-why"><p class="uf-why__h"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1.1 1.3 1.1 2.2h5c0-.9.5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg>Design decision</p><ul class="uf-why__list"><li><b>One modal, four tabs.</b> Override, Discount, Price adjustment and Employee share one modal so that no wrong module is picked.</li><li><b>Plain language.</b> Plain tabs and a $ / % switch replace system codes.</li><li><b>Check before applying.</b> The item, its new price and the approval status show before Apply.</li><li><b>Opens from the bag.</b> There is no transaction ID to type.</li></ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/new-discount.png" aria-label="Enlarge: Transaction Discounts"><img src="assets/pos/e2e/new-discount.png" alt="Transaction Discounts" loading="lazy"></button></figure></article><article class="ufs-step"><h4 class="ufs-nm">Product page</h4><div class="ufs-grp ufs-grp--flow"><h5>Resolved flow friction</h5><ul class="ufs-pts"><li class="one"><span>ADD TO BAG puts the item straight into the bag. Nothing to copy or post.</span></li></ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/new-product.png" aria-label="Enlarge: Product page"><img src="assets/pos/e2e/new-product.png" alt="Product page" loading="lazy"></button></figure></article><article class="ufs-step"><h4 class="ufs-nm">Shipping</h4><div class="uf-why"><p class="uf-why__h"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1.1 1.3 1.1 2.2h5c0-.9.5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg>Design decision</p><ul class="uf-why__list"><li><b>Customer details at a glance.</b> Name and phone number sit side by side, with the address directly beneath, so the associate can confirm them quickly.</li><li><b>Shipping method beside the cost breakdown.</b> The associate can check the amount before confirming, without leaving the page.</li> </ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/new-shipping.png" aria-label="Enlarge: Shipping"><img src="assets/pos/e2e/new-shipping.png" alt="Shipping" loading="lazy"></button></figure></article><article class="ufs-step"><h4 class="ufs-nm">Payment</h4><div class="uf-why"><p class="uf-why__h"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1.1 1.3 1.1 2.2h5c0-.9.5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg>Design decision</p><ul class="uf-why__list"><li><b>Balance carries over from the bag.</b> There is nothing to fetch.</li><li><b>In-store and online totals are separated.</b> Associates and customers can see each amount clearly, and the final total once shipping is added to the online items. The in-store total carries no shipping charge.</li></ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/new-payment.png" aria-label="Enlarge: Payment"><img src="assets/pos/e2e/new-payment.png" alt="Payment" loading="lazy"></button></figure></article><article class="ufs-step"><h4 class="ufs-nm">Purchase complete</h4><div class="uf-why"><p class="uf-why__h"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1.1 1.3 1.1 2.2h5c0-.9.5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg>Design decision</p><ul class="uf-why__list"><li><b>Print and email are separate.</b> The top section is only for customers who want a printed receipt.</li><li><b>Email has its own section.</b> Domain chips such as @gmail.com cut typing time.</li><li><b>Print & Email sits beside Email.</b> Once the customer shares an address, one tap does both.</li></ul></div><figure class="ufs-fig"><button type="button" class="c-zoom" data-src="assets/pos/e2e/new-receipt.png" aria-label="Enlarge: Purchase complete"><img src="assets/pos/e2e/new-receipt.png" alt="Purchase complete" loading="lazy"></button></figure></article></div></div></section>
+      <section id="cart-states" data-outline="Cart line states" class="blk blk--flow cs-sec" style="background:#fff"><h2 class="e2e-hl h34">The different states of a shopping cart item</h2><h3 class="cs-h">Properties</h3><div class="cs-props"><div class="cs-prop"><p>Type</p><div><span>Store item</span><span>Store item with checkbox</span><span>Online item</span><span>Online item, return</span></div></div><div class="cs-prop"><p>State</p><div><span>Default</span><span>On tap</span><span>Selected</span></div></div><div class="cs-prop"><p>Return available</p><div><span>No</span><span>Yes</span></div></div></div><div class="cs-grid"><figure class="cs-card"><div class="cs-shot"><button type="button" class="c-zoom" data-src="assets/pos/cart-states/state-1.png" aria-label="Enlarge: Store item, Default"><img src="assets/pos/cart-states/state-1.png" alt="Store item, Default" loading="lazy"></button></div></figure><figure class="cs-card"><div class="cs-shot"><button type="button" class="c-zoom" data-src="assets/pos/cart-states/state-2.png" aria-label="Enlarge: Store item, Default"><img src="assets/pos/cart-states/state-2.png" alt="Store item, Default" loading="lazy"></button></div></figure><figure class="cs-card"><div class="cs-shot"><button type="button" class="c-zoom" data-src="assets/pos/cart-states/state-3.png" aria-label="Enlarge: Store item, On tap"><img src="assets/pos/cart-states/state-3.png" alt="Store item, On tap" loading="lazy"></button></div></figure><figure class="cs-card"><div class="cs-shot"><button type="button" class="c-zoom" data-src="assets/pos/cart-states/state-4.png" aria-label="Enlarge: Store item with checkbox, Default"><img src="assets/pos/cart-states/state-4.png" alt="Store item with checkbox, Default" loading="lazy"></button></div></figure><figure class="cs-card"><div class="cs-shot"><button type="button" class="c-zoom" data-src="assets/pos/cart-states/state-5.png" aria-label="Enlarge: Store item with checkbox, Selected"><img src="assets/pos/cart-states/state-5.png" alt="Store item with checkbox, Selected" loading="lazy"></button></div></figure><figure class="cs-card"><div class="cs-shot"><button type="button" class="c-zoom" data-src="assets/pos/cart-states/state-6.png" aria-label="Enlarge: Online item, Default"><img src="assets/pos/cart-states/state-6.png" alt="Online item, Default" loading="lazy"></button></div></figure><figure class="cs-card"><div class="cs-shot"><button type="button" class="c-zoom" data-src="assets/pos/cart-states/state-7.png" aria-label="Enlarge: Online item, On tap"><img src="assets/pos/cart-states/state-7.png" alt="Online item, On tap" loading="lazy"></button></div></figure><figure class="cs-card"><div class="cs-shot"><button type="button" class="c-zoom" data-src="assets/pos/cart-states/state-8.png" aria-label="Enlarge: Online item, return, Default"><img src="assets/pos/cart-states/state-8.png" alt="Online item, return, Default" loading="lazy"></button></div></figure></div></section>
+
+      <section class="blk" style="height:1297px; background:rgb(238,232,234)">
+<div class="fx">
+        <h2 class="a t t-h28 t-final h34" style="left:176px; top:71px; width:692px; color:rgb(49,49,49)">Final Design &amp;
+          Solution for Mobile</h2>
+        <img class="a" src="assets/pos/jg8yfKH3vtMBmGdoHNWQ7qpmXtU.png" alt=""
+          style="left:178px; top:202px; width:211px; height:430px">
+        <img class="a" src="assets/pos/badZo8lOeCu8MOfcf89Kzm7eBA.png" alt=""
+          style="left:409px; top:202px; width:221px; height:435px">
+        <img class="a" src="assets/pos/wQtRnVCNVSi1ekmyFgFUEhXE.png" alt=""
+          style="left:650px; top:202px; width:217px; height:434px">
+        <img class="a" src="assets/pos/odrCHxqsBQCqusWn2HhMLQme94.png" alt=""
+          style="left:266px; top:728px; width:219px; height:443px">
+        <img class="a" src="assets/pos/WIXhJhL2F0qoqo2KFVwNrCEPgjw.png" alt=""
+          style="left:518px; top:728px; width:216px; height:442px">
+      </div>
+      </section>
+
+      <section id="impact" data-chapter="Impact" data-outline="Business impact" class="blk" style="height:549px; background:rgb(246,246,246)">
+<div class="fx">
+        <h2 class="a t t-h28 t-nowrap h34" style="left:327px; top:105px; width:390px">Business Impact &amp; Outcomes</h2>
+
+        <h3 class="a t t-h28" style="left:181px; top:258px; width:177px; line-height:31px">1000+ stores worldwide</h3>
+        <p class="a t t-b17 t-center" style="left:178px; top:344px; width:184px">Rolled out in 1000+ stores</p>
+        <h3 class="a t t-h28" style="left:437px; top:258px; width:166px">$3M+ revenue</h3>
+        <p class="a t t-b17 t-center" style="left:437px; top:332px; width:170px">Generated through in-store assisted
+          online orders</p>
+        <h3 class="a t t-h28" style="left:697px; top:258px; width:155px">85% adoption</h3>
+        <p class="a t t-b17 t-center" style="left:672px; top:332px; width:204px">Associates find the tool highly
+          valuable for serving customers</p>
+      </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/case-study.js"></script>
+  <script src="js/flow-story.js"></script>
+  <script src="js/outline.js"></script>
+</body>
+
+</html>

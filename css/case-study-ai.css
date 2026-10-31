@@ -1,0 +1,298 @@
+:root {
+  --white: rgb(255, 255, 255);
+  --grey: rgb(250, 250, 250);
+  --pink: rgb(252, 245, 245);
+  --side: 220px;
+  --hero-zoom: 1;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #000;
+}
+body {
+  background: #000;
+  font-family:
+    "Inter",
+    system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 84px;
+  padding: 20px 0 20px 60px;
+  pointer-events: none;
+}
+.nav__back {
+  pointer-events: auto;
+  position: relative;
+  display: block;
+  width: 124px;
+  height: 44px;
+  background: rgba(23, 23, 23, .86);
+  border-radius: 22px;
+  color: rgb(255, 242, 242);
+  font-size: 14px;
+  line-height: 16.8px;
+  text-decoration: none;
+  transition: background .2s;
+}
+.nav__back:hover {
+  background: rgba(60, 60, 60, .9);
+}
+.nav__arrow {
+  position: absolute;
+  left: 26px;
+  top: 18px;
+}
+.nav__back span {
+  position: absolute;
+  left: 46px;
+  top: 14px;
+}
+.hero {
+  height: calc(675px * var(--hero-zoom));
+  overflow: hidden;
+}
+.hero__stage {
+  position: relative;
+  width: 1200px;
+  height: 675px;
+  margin: 0 auto;
+  zoom: var(--hero-zoom);
+}
+.hero__laptop {
+  position: absolute;
+  left: 533px;
+  top: 217.2px;
+  width: 387px;
+  height: 287.2px;
+  object-fit: cover;
+}
+.hero__phone {
+  position: absolute;
+  left: 320px;
+  top: 99.8px;
+  width: 231px;
+  height: 475.4px;
+  object-fit: cover;
+}
+.doc {
+  padding: 0 var(--side);
+}
+.doc__col {
+  background: var(--white);
+  border-radius: 24px 24px 0 0;
+}
+.sec {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 60px;
+  padding-right: 60px;
+  background: var(--white);
+}
+.sec:first-child {
+  border-radius: 24px 24px 0 0;
+}
+.sec--grey {
+  background: var(--grey);
+}
+.sec--pink {
+  background: var(--pink);
+}
+.row,
+.col {
+  display: flex;
+  max-width: 100%;
+}
+.col {
+  flex-direction: column;
+  width: 100%;
+}
+.row {
+  width: 100%;
+}
+.row > *,
+.col > * {
+  min-width: 0;
+}
+.sec p,
+.sec h2 {
+  width: 100%;
+}
+.hl {
+  font-weight: 600;
+  color: rgb(117, 76, 76);
+}
+.sec ul {
+  list-style: none;
+  width: 100%;
+}
+.sec li {
+  position: relative;
+  display: block;
+  padding-left: 18.53px;
+  width: 100%;
+}
+.sec li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 7px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.t-g22-400 {
+  font: 400 22px/35.2px "Google Sans Flex", sans-serif;
+  color: rgb(18, 18, 18);
+  text-align: left;
+}
+.t-i16-400 {
+  font: 400 16px/25.6px "Inter", sans-serif;
+  color: rgb(82, 82, 82);
+  text-align: left;
+}
+.t-g22-400-b {
+  font: 400 22px/26.4px "Google Sans Flex", sans-serif;
+  color: rgb(18, 18, 18);
+  text-align: start;
+}
+.t-i14-400 {
+  font: 400 14px/22.4px "Inter", sans-serif;
+  color: rgb(54, 49, 49);
+  text-align: left;
+}
+.t-g22-400-c {
+  font: 400 22px/100px "Google Sans Flex", sans-serif;
+  color: rgb(18, 18, 18);
+  text-align: left;
+}
+.t-g16-400 {
+  font: 400 16px/19.2px "Google Sans Flex", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: start;
+}
+.t-i16-400-b {
+  font: 400 16px/19.2px "Inter", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: start;
+}
+.t-i14-300 {
+  font: 300 14px/22.4px "Inter", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: start;
+}
+.t-g18-400 {
+  font: 400 18px/21.6px "Google Sans Flex", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.t-i16-400-c {
+  font: 400 16px/19.2px "Inter", sans-serif;
+  color: rgb(66, 66, 66);
+  text-align: start;
+}
+.t-g18-300 {
+  font: 300 18px/21.6px "Google Sans Flex", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: start;
+}
+.t-g22-400-d {
+  font: 400 22px/26.4px "Google Sans Flex", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: start;
+}
+.t-g26-500 {
+  font: 500 26px/31.2px "Google Sans Flex", sans-serif;
+  color: rgb(130, 79, 79);
+  text-align: center;
+}
+.t-i20-400 {
+  font: 400 20px/24px "Inter", sans-serif;
+  color: rgb(107, 91, 91);
+  text-align: start;
+}
+.t-i16-400-d {
+  font: 400 16px/19.2px "Inter", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+.t-i16-500 {
+  font: 500 16px/19.2px "Inter", sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: start;
+}
+.t-i15-400 {
+  font: 400 15px/18px "Inter", sans-serif;
+  color: rgb(28, 27, 27);
+  text-align: start;
+}
+.t-i15-300 {
+  font: 300 15px/18px "Inter", sans-serif;
+  color: rgb(28, 27, 27);
+  text-align: start;
+}
+.t-i20-500 {
+  font: 500 20px/24px "Inter", sans-serif;
+  color: rgb(107, 91, 91);
+  text-align: start;
+}
+.t-i16-400-e {
+  font: 400 16px/19.2px "Inter", sans-serif;
+  color: rgb(156, 17, 17);
+  text-align: start;
+  font-style: italic;
+}
+.t-g22-400-e {
+  font: 400 22px/26.4px "Google Sans Flex", sans-serif;
+  color: rgb(18, 18, 18);
+  text-align: left;
+}
+.t-g12-400 {
+  font: 400 12px/14.4px "Google Sans Flex", sans-serif;
+  color: rgb(61, 61, 61);
+  text-align: start;
+}
+.t-g18-400-b {
+  font: 400 18px/21.6px "Google Sans Flex", sans-serif;
+  color: rgb(94, 94, 94);
+  text-align: center;
+}
+.t-i14-400-b {
+  font: 400 14px/19.6px "Inter", sans-serif;
+  color: rgb(66, 66, 66);
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  :root {
+    --side: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .nav {
+    padding-left: 16px;
+  }
+  .sec {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
