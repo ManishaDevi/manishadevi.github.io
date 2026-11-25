@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Designing with AI | Manisha Devi</title>
+  <meta name="description" content="How I design with AI: three directions for a pharmacy operations screen generated in Claude Design, how I merged the ones that were really the same idea, and which alerts need a screen, an agent or automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="css/ai-summary.css">
+  <link rel="stylesheet" href="css/ai-workflow.css">
+</head>
+
+<body>
+  <div class="page" id="page">
+
+    <header class="hero hero--wf">
+      <div class="wf-hero">
+        <figure><img src="assets/workflow/dir-list.png" alt="Direction 1: ranked list, also shown as cards"><figcaption>Concept 1: Ranked list or cards</figcaption></figure>
+        <figure><img src="assets/workflow/dir-timeline.png" alt="Direction 2: deadline timeline"><figcaption>Concept 2: Deadline timeline</figcaption></figure>
+        <figure><img src="assets/workflow/dir-split.png" alt="Direction 3: split view"><figcaption>Concept 3: Split view</figcaption></figure>
+      </div>
+    </header>
+
+    <main class="doc">
+
+      <section class="blk blk--flow ai-intro">
+        <h2 class="hd-title">Designing with AI: what I kept, what I merged</h2>
+        <div class="hd-card">
+          <p class="hd-hmw"><b>The question</b> Inventory managers at a hub pharmacy open their home screen to answer one thing: what needs my action today, and what happens if I wait?</p>
+          <div class="f-meta ai-meta">
+            <div><p class="f-label">My role</p><p class="f-val">Frame the prompt, evaluation and decisions</p></div>
+            <div><p class="f-label">AI’s role</p><p class="f-val">Generating visual treatments in Claude Design</p></div>
+            <div><p class="f-label">Domain</p><p class="f-val">Pharmacy operations</p></div>
+          </div>
+        </div>
+        </section>
+
+
+      <section id="split" data-outline="How I split the work" data-outline-short="How I split|the work" class="blk blk--flow ai-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2">How I split the work with AI</h2>
+        <ol class="f-chain wf-chain">
+          <li class="f-step"><span class="f-step__n">Me</span><h4>Frame</h4><p>Started from what I learned shipping the platform: the four personas, the decisions they make each morning, and the data behind those decisions.</p></li>
+          <li class="f-step f-step--ai"><span class="f-step__n">AI</span><h4>Generate</h4><p>Claude Design produced four layouts for the same screen and the same data, each tagged with a UX principle.</p></li>
+          <li class="f-step"><span class="f-step__n">Me</span><h4>Evaluate</h4><p>Compared the layouts by what actually differed, not by the name or principle each one came with.</p></li>
+          <li class="f-step f-step--last"><span class="f-step__n">Me</span><h4>Decide what needs a screen</h4><p>Sorted each alert into interface, agent or automation before choosing a layout.</p></li>
+        </ol>
+      </section>
+
+
+      <section id="directions" data-outline="Three directions" data-outline-short="Three|directions" class="blk blk--flow c-sec ai-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2">User needs and UX principles shaping AI-generated layouts</h2>
+        <div class="c-tabs" role="tablist">
+          <button type="button" class="c-tab is-on" role="tab" aria-selected="true" aria-controls="wf-dir-p1" id="wf-dir-t1">Concept 1: Ranked list or cards</button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="wf-dir-p2" id="wf-dir-t2">Concept 2: Deadline timeline<span class="c-badge">Chosen</span></button>
+          <button type="button" class="c-tab" role="tab" aria-selected="false" aria-controls="wf-dir-p3" id="wf-dir-t3">Concept 3: Split view</button>
+        </div>
+
+        <div class="c-panel" role="tabpanel" id="wf-dir-p1" aria-labelledby="wf-dir-t1">
+          <p class="wf-why"><b>UX principles:</b> Hick’s law, Gestalt proximity and Fitts’s law. One order removes the “where do I start?” decision, problem, evidence and fix sit together, and the large button is the obvious next step. All three hold whether the alerts are rows or cards.</p>
+          <div class="ai-grid ai-grid--2 ai-grid--top wf-pair">
+            <div class="ai-cell"><p class="ai-cap">As a ranked list</p><figure class="ai-fig"><button type="button" class="c-zoom" data-src="assets/workflow/full-list.png" aria-label="Enlarge: ranked list, whole page"><img src="assets/workflow/dir-list.png" alt="Alerts in one table ranked by time to impact" loading="lazy"></button></figure></div>
+            <div class="ai-cell"><p class="ai-cap">As cards</p><figure class="ai-fig"><button type="button" class="c-zoom" data-src="assets/workflow/full-cards.png" aria-label="Enlarge: cards, whole page"><img src="assets/workflow/dir-cards.png" alt="One card per alert with a large number and one button" loading="lazy"></button></figure></div>
+          </div>
+        </div>
+        <div class="c-panel" role="tabpanel" id="wf-dir-p2" aria-labelledby="wf-dir-t2" hidden>
+          <p class="wf-why"><b>UX principle:</b> Chunking by time: the same content as the list and the cards, arranged by deadline instead of by rank. It answers “what can wait?” while keeping today’s list short.</p>
+          <p class="wf-why wf-why--pick"><b>Why I went ahead with this concept:</b> Alerts are grouped by deadline, so the time-sensitive ones come first and users see what needs attention straight away. The work is time-sensitive, so this layout fits it best.</p>
+          <figure class="ai-fig wf-shot"><button type="button" class="c-zoom" data-src="assets/workflow/full-timeline.png" aria-label="Enlarge: deadline timeline, whole page"><img src="assets/workflow/dir-timeline.png" alt="Alerts grouped into today and this week along a timeline" loading="lazy"></button></figure>
+        </div>
+        <div class="c-panel" role="tabpanel" id="wf-dir-p3" aria-labelledby="wf-dir-t3" hidden>
+          <p class="wf-why"><b>UX principle:</b> Master–detail with progressive disclosure: scan the issues on the left, see the evidence and act on the right, without leaving the page.</p>
+          <figure class="ai-fig wf-shot"><button type="button" class="c-zoom" data-src="assets/workflow/full-split.png" aria-label="Enlarge: split view, whole page"><img src="assets/workflow/dir-split.png" alt="A list of issues on the left and the selected issue's evidence and action on the right" loading="lazy"></button></figure>
+        </div>
+      </section>
+
+
+      <section id="refine" data-outline="Refining concept 2" data-outline-short="Refining|concept 2" class="blk blk--flow ai-sec" style="background:#f7f7f7">
+        <h2 class="t t-h27 f-h2">Refining concept 2</h2>
+        <h3 class="wf-step">Step 1 · Removed unnecessary information</h3>
+        <div class="ai-grid ai-grid--2 ai-grid--top wf-pair">
+          <div class="ai-cell"><p class="ai-cap">Before: what AI generated, with the issues outlined</p><figure class="ai-fig"><button type="button" class="c-zoom" data-src="assets/workflow/refine-before.png" aria-label="Enlarge: timeline before refining"><img src="assets/workflow/refine-before.png" alt="Today group of the deadline timeline. The labels under the dates, the Overdue label and the Recommended text blocks are outlined" loading="lazy"></button></figure></div>
+          <div class="ai-cell"><p class="ai-cap">After: refined</p><figure class="ai-fig"><button type="button" class="c-zoom" data-src="assets/workflow/refine-after.png" aria-label="Enlarge: timeline after refining"><img src="assets/workflow/refine-after.png" alt="The refined timeline: Overdue by 11 days, no labels under the dates, and a short quantity line next to each button" loading="lazy"></button></figure></div>
+        </div>
+        
+
+        <h3 class="wf-step wf-step--gap">Step 2 · Added the components each action needs</h3>
+        <ul class="ai-list wf-list wf-list--tight">
+          <li><b>Required inputs.</b> Quantity to request, delivery location, urgency and notes for a purchase; source pharmacy and quantity for a transfer.</li>
+          <li><b>Button placement.</b> Where the action sits relative to the inputs it submits.</li>
+          <li><b>Headers.</b> How the medicine name and code introduce each row.</li>
+          <li><b>Grouping.</b> Which information sits together horizontally, and which stacks vertically.</li>
+        </ul>
+        <div class="ai-grid ai-grid--2 ai-grid--top wf-pair wf-pair--step2">
+          <div class="ai-cell"><figure class="ai-fig"><img src="assets/workflow/step2-shortage.png" alt="Purchase row with quantity to request, delivery location, urgency, notes and Send to Purchaser" loading="lazy"></figure></div>
+          <div class="ai-cell"><figure class="ai-fig"><img src="assets/workflow/step2-transfer.png" alt="Transfer row with the source pharmacy, quantity to transfer and Transfer button" loading="lazy"></figure></div>
+        </div>
+      </section>
+
+
+      <section id="timeline" data-outline="Vertical timeline" data-outline-short="Vertical|timeline" class="blk blk--flow ai-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2">With or without a vertical timeline?</h2>
+        <div class="ai-grid ai-grid--2 ai-grid--top wf-pair">
+          <div class="ai-cell"><p class="ai-cap">With the vertical timeline (kept)</p><figure class="ai-fig"><button type="button" class="c-zoom" data-src="assets/workflow/r2-with-timeline.png" aria-label="Enlarge: with the vertical timeline"><img src="assets/workflow/r2-with-timeline.png" alt="Today group with dates and dots on a vertical line to the left of each task" loading="lazy"></button></figure></div>
+          <div class="ai-cell"><p class="ai-cap">Without the vertical timeline</p><figure class="ai-fig"><button type="button" class="c-zoom" data-src="assets/workflow/r2-without-timeline.png" aria-label="Enlarge: without the vertical timeline"><img src="assets/workflow/r2-without-timeline.png" alt="The same tasks stacked as cards with no timeline" loading="lazy"></button></figure></div>
+        </div>
+        <div class="ai-hsc wf-hsc">
+          <div><h4>Why I kept the vertical timeline</h4><ul>
+            <li>At a glance it reads as “these are my points for today, and this is the task against each one”.</li>
+            <li>It makes the work easy to discover and easy to scan.</li>
+            <li>Without it, the rows run together and the screen is harder to read at a glance.</li>
+          </ul></div>
+        </div>
+        <h3 class="wf-step wf-step--gap">Final screen</h3>
+        <p class="f-lead">Shortages, delayed transfers, cycle counts and expiry were mixed in one list, but an inventory manager handles each as a separate job. So I went ahead with summary cards that work as filters.</p>
+        <div class="ai-grid ai-grid--2 ai-grid--top wf-pair wf-pair--final">
+          <div class="ai-cell"><figure class="ai-fig"><img src="assets/workflow/final-1.png" alt="Final screen with Shortages selected, showing shortage tasks on the vertical timeline" loading="lazy"></figure></div>
+          <div class="ai-cell"><figure class="ai-fig"><img src="assets/workflow/final-2.png" alt="Final screen with Cycle counts selected, showing cycle count tasks on the vertical timeline" loading="lazy"></figure></div>
+        </div>
+      </section>
+
+
+      <section id="visual" data-outline="Visual refinements" data-outline-short="Visual|refinements" class="blk blk--flow ai-sec" style="background:#f7f7f7">
+        <h2 class="t t-h27 f-h2">Visual refinements</h2>
+        <div class="wf-vr">
+          <h3>1.  Fewer strokes, more structure</h3>
+          <ul><li>Each row had an outer stroke, and every input inside it had its own, so a single row stacked many borders.</li><li>I replaced the row stroke with a soft shadow to separate rows, and reduced the stroke width of the inputs.</li></ul>
+          <div class="ai-grid ai-grid--2 ai-grid--top wf-pair">
+            <div class="ai-cell"><p class="ai-cap">Before</p><figure class="ai-fig"><button type="button" class="c-zoom" data-src="assets/workflow/vr-row-before.png" aria-label="Enlarge: row with outer stroke"><img src="assets/workflow/vr-row-before.png" alt="Purchase row with a stroke around the row and around every input" loading="lazy"></button></figure></div>
+            <div class="ai-cell"><p class="ai-cap">After</p><figure class="ai-fig"><button type="button" class="c-zoom" data-src="assets/workflow/vr-row-after.png" aria-label="Enlarge: row with shadow"><img src="assets/workflow/vr-row-after.png" alt="The same row separated by a soft shadow, with lighter input strokes" loading="lazy"></button></figure></div>
+          </div>
+        </div>
+
+        <div class="wf-vr">
+          <h3>2. A cleaner focus state</h3>
+          <ul><li>Clicking an input drew a thicker outline on top of its existing border, so the field showed two rings.</li><li>Now the field’s own border turns blue, with no extra outline.</li></ul>
+          <div class="ai-grid ai-grid--2 ai-grid--top wf-pair wf-pair--sm">
+            <div class="ai-cell"><p class="ai-cap">Before: outline on top of the border</p><figure class="ai-fig"><img src="assets/workflow/vr-focus-before.png" alt="Focused quantity input with a blue outline around its grey border" loading="lazy"></figure></div>
+            <div class="ai-cell"><p class="ai-cap">After: the border itself changes</p><figure class="ai-fig"><img src="assets/workflow/vr-focus-after.png" alt="Focused quantity input with a single blue border" loading="lazy"></figure></div>
+          </div>
+        </div>
+
+        <div class="wf-vr">
+          <h3>3. Type, spacing and colour</h3>
+          <ul>
+            <li>Reworked the spacing, and how “Today” and the “Quantity to request” label are set.</li>
+            <li>Adjusted the colour and weight of the placeholder text in Notes.</li>
+            <li>Timeline dots now carry urgency: red for today, yellow for tomorrow.</li>
+          </ul>
+          <div class="ai-grid ai-grid--2 ai-grid--top wf-pair wf-pair--fields">
+          <div class="ai-cell"><figure class="ai-fig"><img src="assets/workflow/vr-fields-1.png" alt="Form fields with bold labels" loading="lazy"></figure></div>
+          <div class="ai-cell"><figure class="ai-fig"><img src="assets/workflow/vr-fields-2.png" alt="Form fields with lighter labels and a wider Notes field" loading="lazy"></figure></div>
+        </div>
+        </div>
+
+        <div class="wf-vr">
+          <h3>4. Confirmation where the action happened</h3>
+          <ul><li>After Send to Purchaser, the confirmation used to appear at the top of the page, away from the row the user just acted on.</li><li>Now it appears in that row, saying what was sent and where.</li></ul>
+          <figure class="ai-fig wf-shot wf-shot--md"><img src="assets/workflow/vr-sent.png" alt="The Simvastatin row replaced by a green confirmation: Sent to Purchaser, 510 tabs to San Diego Coastal Hub" loading="lazy"></figure>
+        </div>
+      </section>
+
+
+
+      <section id="decide" data-outline="Three ways to handle alerts" data-outline-short="Three ways to|handle alerts" class="blk blk--flow ai-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2">Three ways to handle alerts: interface, agent and automation</h2>
+        <div class="wf-split">
+          <div><p class="wf-split__n">1</p><p class="wf-split__l">Interface</p><p class="wf-split__s">The person reviews the information and takes action on the screen.</p></div>
+          <div><p class="wf-split__n">3</p><p class="wf-split__l">Agent drafts, person approves</p><p class="wf-split__s">AI prepares the work. A person reviews and approves it.</p></div>
+          <div><p class="wf-split__n">2</p><p class="wf-split__l">Automation</p><p class="wf-split__s">he system follows a rule and takes action. It then informs the person.</p></div>
+        </div>
+        <table class="f-table wf-table">
+          <thead><tr><th>Alert</th><th>Proposed</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Shortage, stock nearby<span>Amlodipine, Hydrochlorothiazide</span></td><td><b class="wf-tag wf-tag--agent">Agent</b>Drafts the transfer from the nearest site; the manager approves</td><td>Finding stock is search work. Moving it between sites still needs someone’s sign-off.</td></tr>
+            <tr><td>Shortage, no stock nearby<span>Simvastatin</span></td><td><b class="wf-tag wf-tag--agent">Agent</b>Drafts the purchase order; the purchaser approves</td><td>Spending money stays a human decision.</td></tr>
+            <tr><td>Transfer delayed<span>Metoprolol, waiting 11 days</span></td><td><b class="wf-tag wf-tag--auto">Automation</b>Escalates after a set wait, then tells the manager</td><td>Chasing on a timer needs no judgment. The manager steps in only if escalation fails.</td></tr>
+            <tr><td>Expiring stock<span>Insulin glargine</span></td><td><b class="wf-tag wf-tag--auto">Automation</b>Creates the return when the credit window opens; someone confirms the vials</td><td>The credit window is a date rule. Checking the vials is physical.</td></tr>
+            <tr><td>Controlled substances count</td><td><b class="wf-tag wf-tag--ui">Interface</b>Stays on the screen</td><td>A regulated, physical count with a named owner. Accountability can’t be handed to an agent.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+
+     
+
+      
+    </main>
+  </div>
+  <script src="js/case-study.js"></script>
+  <script src="js/outline.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prototyping with Claude | Manisha Devi</title>
+  <meta name="description" content="Building an interactive clinical workspace prototype with Claude: choosing the Nord design system for healthcare, designing to WCAG 2.2 AA, and the prompt behind it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="css/ai-summary.css">
+  <link rel="stylesheet" href="css/ai-workflow.css">
+</head>
+
+<body>
+  <div class="page" id="page">
+
+    <header class="hero hero--wf">
+      <figure class="wf-video">
+        <img src="assets/workflow/clinical-mobile.gif" alt="Mobile prototype of the clinical workspace: the Today screen with consultations, results to review and open tasks">
+        <figcaption>Clinical workspace · mobile prototype</figcaption>
+      </figure>
+    </header>
+
+    <main class="doc">
+
+      <section class="blk blk--flow ai-intro">
+        <h2 class="hd-title">Prototyping with Claude: a clinical workspace</h2>
+        <div class="hd-card">
+          <p class="hd-hmw"><b>The brief</b> A high-fidelity, interactive workspace for clinicians in a multi-specialty hospital, built as a working prototype rather than static screens.</p>
+          <div class="f-meta ai-meta">
+            <div><p class="f-label">My role</p><p class="f-val">Write the prompt, pick the design system, review accessibility</p></div>
+            <div><p class="f-label">AI’s role</p><p class="f-val">Building the interactive prototype in Claude</p></div>
+            <div><p class="f-label">Domain</p><p class="f-val">Healthcare · clinical workflows</p></div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="design-system" data-outline="Design system" data-outline-short="Design|system" class="blk blk--flow ai-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2">Design system: Nord</h2>
+        <p class="f-lead">Before writing the prompt, I picked a design system so the prototype would start from tested components and tokens instead of a look the AI made up.</p>
+        <div class="ai-hsc wf-hsc">
+          <div><h4>Why Nord</h4><ul>
+            <li>Nord is built by Nordhealth specifically for healthcare software, and it’s widely used in healthcare products.</li>
+            <li>Its principles fit clinical work: quiet by default, dense but not cramped, so clinicians can scan a lot of patient data.</li>
+            <li>Colour is saved for one primary action and for status, so alerts stand out.</li>
+          </ul></div>
+          <div><h4>Designing to WCAG 2.2 AA</h4><ul>
+            <li><b>Contrast:</b> every text pair meets 4.5:1, and control borders, icons and focus rings meet 3:1. Where Nord Light fell short, I adjusted the colour.</li>
+            <li><b>Focus:</b> a visible 2px focus ring with a 2px offset on every focusable element.</li>
+            <li><b>Target size:</b> every target is at least 24px (WCAG 2.5.8).</li>
+            <li><b>Not colour alone:</b> every status has a word, an icon or both. AI-generated content is labelled as well as styled.</li>
+            <li><b>Motion:</b> all motion is removed under reduced-motion settings.</li>
+          </ul></div>
+        </div>
+      </section>
+
+
+      <section id="prompt" data-outline="The prompt" data-outline-short="The|prompt" class="blk blk--flow ai-sec" style="background:#f7f7f7">
+        <h2 class="t t-h27 f-h2">The prompt</h2>
+
+        <div class="wf-prompt">
+          <p class="wf-prompt__label">Prompt</p>
+          <p class="wf-prompt__lead">Design a high-fidelity interactive enterprise healthcare application for clinicians working in a multi-specialty hospital.</p>
+
+          <h3>Problem</h3>
+          <p>Clinicians currently work across fragmented systems to access patient records, medical history, laboratory reports, medication information and clinical notes. This creates cognitive overload and makes it difficult to get a consolidated understanding of a patient's condition.</p>
+
+          <h3>Goal</h3>
+          <p>The goal is to create a unified clinical workspace that organizes patient information and uses AI to assist clinicians without replacing their clinical judgment.</p>
+
+          <h3>Primary users</h3>
+          <ul>
+            <li>Physicians</li>
+          </ul>
+
+          <h3>Core experience</h3>
+          <ol class="wf-prompt__core">
+            <li><b>Clinical dashboard</b><ul><li>Patient list</li><li>Upcoming consultations</li><li>Pending lab reports</li><li>Patients requiring follow-up</li><li>Prioritized tasks</li></ul></li>
+            <li><b>Patient overview</b><ul><li>Patient demographics</li><li>Medical history</li><li>Allergies</li><li>Current medications</li><li>Vital signs</li><li>Previous consultations</li></ul></li>
+            <li><b>Patient timeline</b><ul><li>Previous diagnoses</li><li>Laboratory reports</li><li>Clinical notes</li><li>Medication changes</li><li>Recent hospital visits</li></ul></li>
+            <li><b>AI clinical assistant</b><ul><li>Generate a summary of the patient's medical history.</li><li>Highlight relevant changes in laboratory results.</li><li>Identify missing documentation.</li><li>Show the source of every AI-generated insight.</li><li>Allow clinicians to review, edit, accept or reject suggestions.</li></ul></li>
+            <li><b>Clinical documentation</b><ul><li>Create consultation notes.</li><li>Review AI-generated drafts.</li><li>Edit and approve documentation.</li><li>Maintain an audit trail.</li></ul></li>
+          </ol>
+        </div>
+      </section>
+
+
+      <section id="walkthrough" data-outline="Walkthrough" data-outline-short="Walk-|through" class="blk blk--flow ai-sec" style="background:#fff">
+        <h2 class="t t-h27 f-h2">Final Prototype</h2>
+        <figure class="wf-video wf-video--light">
+          <img src="assets/workflow/clinical-mobile.gif" alt="Mobile prototype of the clinical workspace: the Today screen with consultations, results to review and open tasks">
+        </figure>
+      </section>
+
+    </main>
+  </div>
+  <script src="js/case-study.js"></script>
+  <script src="js/outline.js"></script>
+</body>
+</html>
